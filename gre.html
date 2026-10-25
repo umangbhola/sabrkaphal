@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GRE vocabulary · Umang Bhola</title>
+<meta name="description" content="Free GRE vocabulary flashcards with spaced repetition, quizzes and memory hooks. 960 words in 32 groups.">
+<link rel="icon" href="assets/logo-wave.png" type="image/png">
+<script>try { if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); } catch (e) {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F5F0; --panel: #FFFFFF; --soft: #FBFAF7; --tile: #EFEBE3;
+    --ink: #243240; --ink-2: #5D6672; --ink-3: #868E99; --line: #E5E0D6; --line-2: #D6D0C4;
+    --accent: #3D8B62; --accent-ink: #2F6F4D; --accent-soft: #E7F2EB; --on-accent: #FFFFFF;
+    --gold: #C89A45; --gold-soft: #F6EBD5;
+    --bad: #B0503B; --bad-soft: #F8E7E2;
+    --band: linear-gradient(135deg, #EEF5F0 0%, #F7F1E4 100%); --band-line: #E2E6DD;
+    --focus: #2F6F4D;
+    --shadow: 0 1px 2px rgba(36, 50, 64, .04), 0 10px 30px rgba(36, 50, 64, .06);
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color-scheme: light;
+  }
+  :root[data-theme="dark"] {
+    --paper: #171B21; --panel: #1F242C; --soft: #1C2128; --tile: #262C35;
+    --ink: #E6E8EB; --ink-2: #A9B1BB; --ink-3: #7F8893; --line: #2F3640; --line-2: #3A424D;
+    --accent: #6DBF91; --accent-ink: #8ED1AB; --accent-soft: rgba(109, 191, 145, .13); --on-accent: #10261A;
+    --gold: #E0B260; --gold-soft: rgba(224, 178, 96, .15);
+    --bad: #E58C77; --bad-soft: rgba(229, 140, 119, .13);
+    --band: linear-gradient(135deg, #1E2A25 0%, #2A271F 100%); --band-line: #313A36;
+    --focus: #8ED1AB;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .2), 0 10px 30px rgba(0, 0, 0, .25);
+    color-scheme: dark;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.05rem/1.6 var(--serif); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  button, input, textarea, select { font: inherit; color: inherit; }
+  a { color: var(--accent-ink); text-underline-offset: 3px; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+  [hidden] { display: none !important; }
+  .vh { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .skip { position: absolute; left: 1rem; top: -3rem; z-index: 100; padding: .5rem .9rem; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; font: 600 .9rem var(--sans); }
+  .skip:focus { top: .75rem; }
+
+  /* ---------- Top bar ---------- */
+  .bar { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--paper) 88%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .bar-in { max-width: 1080px; margin: 0 auto; padding: .7rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-family: var(--sans); }
+  .backlink { display: inline-flex; align-items: center; gap: .4rem; font: 600 .9rem var(--sans); color: var(--ink-2); text-decoration: none; padding: .4rem .6rem; margin-left: -.6rem; border-radius: 999px; }
+  .backlink:hover { color: var(--ink); background: var(--tile); }
+  .backlink svg { width: 16px; height: 16px; }
+  .icon-btn { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; height: 38px; padding: 0 .85rem; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--ink-2); cursor: pointer; font: 500 .85rem var(--sans); }
+  .icon-btn:hover { color: var(--ink); border-color: var(--line-2); }
+  .icon-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  main { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+  .notice { display: flex; align-items: flex-start; justify-content: space-between; gap: .75rem; margin: 1rem 0 0; padding: .75rem 1rem; border-radius: 12px; border: 1px solid var(--gold); background: var(--gold-soft); font: 500 .9rem/1.45 var(--sans); }
+
+  /* ---------- Buttons ---------- */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px; padding: .55rem 1.1rem; border-radius: 12px; border: 1px solid var(--line-2); background: var(--panel); color: var(--ink); font: 600 .95rem/1.2 var(--sans); cursor: pointer; text-decoration: none; transition: border-color .15s, background .15s; }
+  .btn:hover { border-color: var(--ink-3); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .btn.primary:hover { filter: brightness(1.06); }
+  .btn.small { min-height: 36px; padding: .35rem .8rem; font-size: .85rem; border-radius: 10px; }
+  .btn.ghost { background: transparent; }
+  .btn:disabled { opacity: .55; cursor: not-allowed; }
+  .kbd { display: inline-flex; align-items: center; justify-content: center; min-width: 1.4em; height: 1.4em; padding: 0 .3em; border-radius: 5px; border: 1px solid currentColor; font: 600 .72rem/1 var(--sans); opacity: .7; }
+
+  /* ---------- Home ---------- */
+  .band { margin: 1.5rem 0 0; padding: 1.75rem 1.75rem 1.6rem; border-radius: 22px; background: var(--band); border: 1px solid var(--band-line); }
+  .band h1 { font: 600 clamp(1.9rem, 4vw, 2.6rem)/1.1 var(--serif); letter-spacing: -.01em; margin: 0 0 .35rem; }
+  .band .sub { margin: 0 0 1.25rem; color: var(--ink-2); font-size: 1.02rem; }
+  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; margin: 0 0 1.3rem; }
+  .stat { margin: 0; padding: .8rem .9rem; border-radius: 14px; background: color-mix(in srgb, var(--panel) 75%, transparent); border: 1px solid var(--band-line); }
+  .stat dd { margin: 0; font: 600 1.6rem/1.1 var(--serif); }
+  .stat dt { margin: .2rem 0 0; font: 500 .78rem/1.3 var(--sans); color: var(--ink-2); }
+  .stats div { display: flex; flex-direction: column-reverse; }
+  .actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+
+  .h2row { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin: 2.25rem 0 .9rem; }
+  h2 { font: 600 1.45rem/1.2 var(--serif); margin: 0; }
+  .search { position: relative; margin: 0 0 1.25rem; }
+  .search label { display: block; font: 600 .82rem var(--sans); color: var(--ink-2); margin: 0 0 .35rem; }
+  .search input { width: 100%; height: 48px; padding: 0 1rem 0 2.6rem; border-radius: 12px; border: 1px solid var(--line-2); background: var(--panel); font: 400 1rem var(--sans); }
+  .search svg { position: absolute; left: .9rem; bottom: 15px; width: 18px; height: 18px; fill: none; stroke: var(--ink-3); stroke-width: 2; stroke-linecap: round; }
+  .results { margin: 0 0 1.5rem; }
+  .results .count { font: 500 .85rem var(--sans); color: var(--ink-2); margin: 0 0 .6rem; }
+  .list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); overflow: hidden; }
+  .list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .35rem 1rem; align-items: center; padding: .85rem 1rem; border-top: 1px solid var(--line); }
+  .list li:first-child { border-top: 0; }
+  .list .w { font: 600 1.12rem/1.3 var(--serif); }
+  .list .g { font: 500 .78rem var(--sans); color: var(--ink-3); margin-left: .4rem; }
+  .list .m { grid-column: 1 / -1; margin: 0; color: var(--ink-2); font-size: .98rem; }
+  .list .side { display: flex; align-items: center; gap: .5rem; }
+
+  .status { display: inline-flex; align-items: center; gap: .35rem; font: 600 .75rem/1 var(--sans); padding: .3rem .55rem; border-radius: 999px; border: 1px solid var(--line-2); color: var(--ink-2); white-space: nowrap; }
+  .status::before { content: ""; width: 8px; height: 8px; border-radius: 2px; border: 1.5px dashed var(--ink-3); }
+  .status.learning::before { border: 0; background: var(--gold); }
+  .status.known { color: var(--accent-ink); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+  .status.known::before { border: 0; background: var(--accent); border-radius: 50%; }
+  .status.due { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 45%, transparent); }
+  .status.due::before { border: 0; background: var(--bad); transform: rotate(45deg); }
+
+  .groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: .8rem; list-style: none; margin: 0; padding: 0; }
+  .gc { display: flex; flex-direction: column; gap: .6rem; padding: 1rem 1rem 1.05rem; border-radius: 16px; background: var(--panel); border: 1px solid var(--line); }
+  .gc h3 { font: 600 1.2rem/1.2 var(--serif); margin: 0; }
+  .gc .meta { margin: 0; font: 500 .8rem/1.45 var(--sans); color: var(--ink-2); }
+  .meter { position: relative; height: 8px; border-radius: 99px; background: var(--tile); overflow: hidden; }
+  .meter span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 99px; }
+  .meter .started { background: var(--gold-soft); box-shadow: inset 0 0 0 1px var(--gold); }
+  .meter .known { background: var(--accent); }
+  .gc .row { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: .4rem; margin-top: auto; }
+  .gc .row .btn { padding: .35rem .3rem; font-size: .82rem; }
+
+  .data { margin: 2.5rem 0 0; padding: 1.1rem 1.2rem; border-radius: 16px; border: 1px solid var(--line); background: var(--soft); }
+  .data h2 { font-size: 1.1rem; margin: 0 0 .25rem; }
+  .data p { margin: 0 0 .8rem; color: var(--ink-2); font-size: .95rem; }
+
+  /* ---------- Study views ---------- */
+  .study { max-width: 680px; margin: 0 auto; padding-top: 1.25rem; }
+  .study-head { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin: 0 0 .8rem; font-family: var(--sans); }
+  .study-head h1 { font: 600 1.15rem/1.3 var(--serif); margin: 0; }
+  .pos { font: 500 .85rem var(--sans); color: var(--ink-2); white-space: nowrap; }
+  .track { height: 6px; border-radius: 99px; background: var(--tile); overflow: hidden; margin: 0 0 1.1rem; }
+  .track span { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 99px; transition: width .3s ease; }
+
+  .fc { position: relative; display: block; width: 100%; min-height: 280px; padding: 2.75rem 1.75rem 1.75rem; border-radius: 22px; background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); text-align: center; cursor: pointer; }
+  .fc.back { cursor: default; text-align: left; }
+  .fc .sq { position: absolute; top: 1rem; left: 1rem; width: 16px; height: 16px; border-radius: 4px; border: 2px dashed var(--ink-3); }
+  .fc.back .sq { border: 2px solid var(--gold); background: var(--gold); }
+  .fc .side-label { position: absolute; top: .85rem; left: 2.6rem; font: 600 .72rem/1.5 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+  .fc .word { font: 600 clamp(2rem, 7vw, 2.9rem)/1.15 var(--serif); margin: 2.5rem 0 1rem; letter-spacing: -.01em; overflow-wrap: anywhere; }
+  .fc.back .word { font-size: 1.6rem; margin: .25rem 0 .75rem; }
+  .fc .hint { font: 500 .85rem var(--sans); color: var(--ink-3); margin: 0; }
+  .fc.anim { animation: turn .28s ease; }
+  @keyframes turn { from { opacity: .35; transform: perspective(900px) rotateX(8deg) translateY(4px); } to { opacity: 1; transform: none; } }
+  .senses { margin: 0; padding: 0 0 0 1.4rem; font-size: 1.12rem; line-height: 1.55; }
+  .senses li { margin: 0 0 .4rem; padding-left: .2rem; }
+  .senses.one { list-style: none; padding-left: 0; }
+  .flip-row { display: flex; justify-content: center; margin: 1rem 0 0; }
+
+  .remember { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: .9rem; align-items: start; margin: 1.25rem 0 0; padding: .9rem; border-radius: 16px; background: var(--soft); border: 1px solid var(--line); }
+  .remember .pic { width: 88px; height: 88px; border-radius: 14px; background: var(--gold-soft); display: flex; align-items: center; justify-content: center; overflow: hidden; font-size: 2.6rem; line-height: 1; }
+  .remember .pic img { width: 100%; height: 100%; object-fit: cover; }
+  .remember .pic.empty { background: var(--tile); border: 2px dashed var(--line-2); }
+  .remember h3 { font: 700 .74rem/1.4 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 .2rem; }
+  .remember p { margin: 0 0 .45rem; font-size: 1.02rem; }
+  .remember .src { font: 500 .75rem var(--sans); color: var(--ink-3); }
+  .linkish { background: none; border: 0; padding: 0; color: var(--accent-ink); font: 600 .85rem var(--sans); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .editor { grid-column: 1 / -1; display: grid; gap: .6rem; margin-top: .3rem; font-family: var(--sans); }
+  .editor label { font: 600 .82rem var(--sans); color: var(--ink-2); }
+  .editor textarea { width: 100%; min-height: 70px; padding: .6rem .75rem; border-radius: 10px; border: 1px solid var(--line-2); background: var(--panel); font: 400 1rem/1.45 var(--serif); resize: vertical; }
+  .editor input[type="file"] { font-size: .85rem; max-width: 100%; }
+  .editor .row { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .editor .err { color: var(--bad); font-size: .85rem; margin: 0; }
+
+  .rate { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; margin: 1.1rem 0 0; }
+  .rate .btn { flex-direction: column; gap: .15rem; min-height: 62px; }
+  .rate .btn small { font: 500 .74rem var(--sans); color: var(--ink-3); }
+  .rate .again { border-color: color-mix(in srgb, var(--bad) 45%, transparent); }
+  .rate .again:hover { background: var(--bad-soft); }
+  .rate .good { border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+  .rate .good:hover, .rate .easy:hover { background: var(--accent-soft); }
+  .rate .easy { border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+  .keys { text-align: center; font: 500 .8rem var(--sans); color: var(--ink-3); margin: .9rem 0 0; }
+
+  .done { text-align: center; padding: 2.25rem 1.5rem; border-radius: 22px; background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .done h2 { font-size: 1.6rem; margin: 0 0 .4rem; }
+  .done p { color: var(--ink-2); margin: 0 0 1.25rem; }
+  .done .actions { justify-content: center; }
+  .missed { text-align: left; margin: 0 0 1.4rem; }
+
+  /* Quiz */
+  .q { padding: 1.5rem 1.5rem 1.4rem; border-radius: 22px; background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .q .ask { font: 600 .74rem/1.4 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 .35rem; }
+  .q .prompt { font: 600 clamp(1.5rem, 5vw, 2.1rem)/1.25 var(--serif); margin: 0 0 1.1rem; overflow-wrap: anywhere; }
+  .q .prompt.def { font-size: clamp(1.15rem, 3.6vw, 1.4rem); font-weight: 500; line-height: 1.45; }
+  .opts { display: grid; gap: .55rem; list-style: none; margin: 0; padding: 0; }
+  .opt { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .75rem; align-items: center; width: 100%; min-height: 54px; padding: .7rem .9rem; text-align: left; border-radius: 14px; border: 1px solid var(--line-2); background: var(--soft); cursor: pointer; font: 400 1.02rem/1.4 var(--serif); }
+  .opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+  .opt .n { font: 600 .8rem/1 var(--sans); color: var(--ink-3); width: 1.6rem; height: 1.6rem; border-radius: 8px; border: 1px solid var(--line-2); display: inline-flex; align-items: center; justify-content: center; }
+  .opt.word { font-weight: 600; font-size: 1.15rem; }
+  .opt:disabled { cursor: default; color: var(--ink); }
+  .opt .tag { font: 700 .72rem/1 var(--sans); padding: .3rem .5rem; border-radius: 999px; white-space: nowrap; }
+  .opt.right { border: 2px solid var(--accent); background: var(--accent-soft); }
+  .opt.right .tag { background: var(--accent); color: var(--on-accent); }
+  .opt.wrong { border: 2px solid var(--bad); background: var(--bad-soft); }
+  .opt.wrong .tag { background: var(--bad); color: #fff; }
+  .opt.dim { opacity: .6; }
+  .fb { margin: 1.1rem 0 0; padding: 1rem 1rem 1.05rem; border-radius: 16px; border: 1px solid var(--line); background: var(--soft); }
+  .fb .verdict { display: flex; align-items: center; gap: .5rem; font: 700 1rem var(--sans); margin: 0 0 .5rem; }
+  .fb .verdict svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+  .fb .verdict.ok { color: var(--accent-ink); }
+  .fb .verdict.no { color: var(--bad); }
+  .fb .fw { font: 600 1.2rem var(--serif); margin: 0 0 .3rem; }
+  .fb .remember { margin-top: .8rem; background: var(--panel); }
+  .next-row { display: flex; justify-content: flex-end; align-items: center; gap: .75rem; margin: 1rem 0 0; }
+  .score { font: 600 3rem/1 var(--serif); margin: .2rem 0 .6rem; }
+
+  /* Dialogs */
+  dialog { width: min(460px, calc(100vw - 2rem)); border: 1px solid var(--line); border-radius: 20px; padding: 1.4rem 1.4rem 1.25rem; background: var(--panel); color: var(--ink); box-shadow: 0 30px 80px rgba(20, 28, 36, .25); }
+  dialog::backdrop { background: rgba(30, 36, 44, .45); }
+  dialog h2 { margin: 0 0 1rem; }
+  fieldset { border: 0; margin: 0 0 1rem; padding: 0; }
+  legend { font: 600 .85rem var(--sans); color: var(--ink-2); margin: 0 0 .5rem; padding: 0; }
+  .choices { display: grid; gap: .4rem; }
+  .choices.row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .choice { position: relative; }
+  .choice input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .choice span { display: flex; align-items: center; gap: .6rem; min-height: 46px; padding: .55rem .8rem; border-radius: 12px; border: 1px solid var(--line-2); background: var(--soft); font: 500 .95rem var(--sans); }
+  .choice span::before { content: ""; flex: none; width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--ink-3); }
+  .choice input:checked + span { border-color: var(--accent); background: var(--accent-soft); }
+  .choice input:checked + span::before { border: 5px solid var(--accent); }
+  .choice input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .choices.row .choice span { justify-content: center; }
+  .dlg-actions { display: flex; justify-content: flex-end; gap: .5rem; margin-top: 1.25rem; }
+  .wlist-head { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1rem; }
+
+  @media (max-width: 640px) {
+    main { padding: 0 1rem 3rem; }
+    .bar-in { padding: .6rem 1rem; }
+    .band { padding: 1.3rem 1.1rem 1.2rem; border-radius: 18px; margin-top: 1rem; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .actions .btn { flex: 1 1 100%; }
+    .fc { min-height: 240px; padding: 2.5rem 1.1rem 1.25rem; }
+    .remember { grid-template-columns: 64px minmax(0, 1fr); }
+    .remember .pic { width: 64px; height: 64px; font-size: 2rem; }
+    .q { padding: 1.2rem 1rem; }
+    .rate { gap: .45rem; }
+    .list li { grid-template-columns: minmax(0, 1fr); }
+    .list .side { justify-content: flex-start; }
+    .theme-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="backlink" href="gre-prep.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to GRE prep</a>
+    <button class="icon-btn" id="themeBtn" type="button" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true" id="themeIcon"></svg><span class="theme-label" id="themeLabel">Dark mode</span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="notice" id="notice" role="status" hidden></div>
+
+  <!-- Home -->
+  <section id="v-home" aria-labelledby="homeTitle">
+    <div class="band">
+      <h1 id="homeTitle">GRE vocabulary</h1>
+      <p class="sub">959 high-frequency words in 32 groups. Flip, rate how well you knew it, and the cards come back just before you forget them.</p>
+      <dl class="stats" aria-label="Your progress">
+        <div class="stat"><dt>words started</dt><dd id="stStarted">0</dd></div>
+        <div class="stat"><dt>well known</dt><dd id="stKnown">0</dd></div>
+        <div class="stat"><dt>due today</dt><dd id="stDue">0</dd></div>
+        <div class="stat"><dt>day streak</dt><dd id="stStreak">0</dd></div>
+      </dl>
+      <div class="actions">
+        <button class="btn primary" id="mainStudy" type="button">Learn 15 new words</button>
+        <button class="btn" id="mainQuiz" type="button">Quiz me</button>
+      </div>
+    </div>
+
+    <div class="h2row"><h2 id="groupsTitle">Word groups</h2></div>
+    <div class="search" role="search">
+      <label for="q">Search words and meanings</label>
+      <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Try “stubborn” or “laconic”" aria-describedby="resultCount">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    </div>
+    <div class="results" id="results" hidden>
+      <p class="count" id="resultCount" aria-live="polite"></p>
+      <ul class="list" id="resultList"></ul>
+    </div>
+    <ul class="groups" id="groups" aria-labelledby="groupsTitle"></ul>
+
+    <section class="data" aria-labelledby="dataTitle">
+      <h2 id="dataTitle">Your progress data</h2>
+      <p>Progress is saved in this browser only. Export it to keep a copy or move it to another device.</p>
+      <div class="actions">
+        <button class="btn small" id="exportBtn" type="button">Export</button>
+        <button class="btn small" id="importBtn" type="button">Import</button>
+        <input type="file" id="importFile" accept="application/json,.json" class="vh" tabindex="-1" aria-hidden="true">
+        <button class="btn small ghost" id="resetBtn" type="button">Reset progress</button>
+      </div>
+    </section>
+  </section>
+
+  <!-- Flashcards -->
+  <section id="v-cards" class="study" aria-labelledby="cardsTitle" hidden>
+    <div class="study-head">
+      <button class="btn small ghost" type="button" data-home>All groups</button>
+      <span class="pos" id="cardPos"></span>
+    </div>
+    <h1 class="vh" id="cardsTitle">Flashcards</h1>
+    <div class="track" aria-hidden="true"><span id="cardTrack"></span></div>
+    <div id="cardArea"></div>
+  </section>
+
+  <!-- Quiz -->
+  <section id="v-quiz" class="study" aria-labelledby="quizTitle" hidden>
+    <div class="study-head">
+      <button class="btn small ghost" type="button" data-home>All groups</button>
+      <span class="pos" id="quizPos"></span>
+    </div>
+    <h1 class="vh" id="quizTitle">Quiz</h1>
+    <div class="track" aria-hidden="true"><span id="quizTrack"></span></div>
+    <div id="quizArea"></div>
+  </section>
+
+  <!-- Group word list -->
+  <section id="v-words" class="study" aria-labelledby="wordsTitle" hidden>
+    <div class="study-head">
+      <button class="btn small ghost" type="button" data-home>All groups</button>
+    </div>
+    <h1 id="wordsTitle" style="font:600 1.6rem/1.2 var(--serif);margin:0 0 .75rem"></h1>
+    <div class="wlist-head" id="wordsActions"></div>
+    <ul class="list" id="wordsList"></ul>
+  </section>
+
+  <p class="vh" id="live" aria-live="polite"></p>
+</main>
+
+<dialog id="quizSetup" aria-labelledby="quizSetupTitle">
+  <form method="dialog" id="quizForm">
+    <h2 id="quizSetupTitle">Quiz me</h2>
+    <p id="quizScope" style="margin:-.5rem 0 1rem;color:var(--ink-2);font-size:.95rem"></p>
+    <fieldset>
+      <legend>Question type</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="mode" value="mixed" checked><span>Mixed</span></label>
+        <label class="choice"><input type="radio" name="mode" value="wm"><span>Word to meaning</span></label>
+        <label class="choice"><input type="radio" name="mode" value="mw"><span>Meaning to word</span></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Number of questions</legend>
+      <div class="choices row">
+        <label class="choice"><input type="radio" name="count" value="10" checked><span>10</span></label>
+        <label class="choice"><input type="radio" name="count" value="20"><span>20</span></label>
+        <label class="choice"><input type="radio" name="count" value="30"><span>30</span></label>
+      </div>
+    </fieldset>
+    <div class="dlg-actions">
+      <button class="btn ghost" value="cancel" type="submit" formnovalidate>Cancel</button>
+      <button class="btn primary" value="start" type="submit">Start quiz</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="resetDlg" aria-labelledby="resetTitle">
+  <form method="dialog">
+    <h2 id="resetTitle">Reset all progress?</h2>
+    <p style="margin:0;color:var(--ink-2)">This clears every word’s review schedule and your streak in this browser. Your own memory hooks and pictures are kept. Export first if you want a copy.</p>
+    <div class="dlg-actions">
+      <button class="btn ghost" value="cancel" type="submit">Cancel</button>
+      <button class="btn primary" value="reset" type="submit">Reset progress</button>
+    </div>
+  </form>
+</dialog>
+
+<script>window.GRE_DATA = [[{"w":"abound","m":["be present in large quantities"]},{"w":"amorphous","m":["lacking structure; unclear"]},{"w":"austere","m":["(of a person) strict and stern in character","(of living conditions) lacking luxury; extremely harsh"]},{"w":"belie","m":["give a false impression of; mask"]},{"w":"capricious","m":["having varying moods; fickle"]},{"w":"cerebral","m":["related to the brain","intellectual; focused on learning rather than emotion"]},{"w":"congenial","m":["(of a person) likable and friendly, often due to shared interests","(of a thing) enjoyable because it aligns with one's tendencies"]},{"w":"conspicuous","m":["easily noticed; obvious"]},{"w":"cursory","m":["lacking effort; without care"]},{"w":"daunting","m":["scary or frightening; (of a task) seeming impossible"]},{"w":"deify","m":["look up to someone or something as a god"]},{"w":"didactic","m":["meant for teaching; educational, sometimes in a condescending manner"]},{"w":"disseminate","m":["distribute or circulate broadly"]},{"w":"feasible","m":["likely to be achieved; practical"]},{"w":"flout","m":["break a rule without guilt"]},{"w":"homogeneous","m":["composed of similar parts; alike"]},{"w":"humdrum","m":["boring; unlikely to excite"]},{"w":"insipid","m":["without flavor; lacking energy"]},{"w":"loquacious","m":["likely to talk a lot; wordy"]},{"w":"misanthropic","m":["having a distaste for humans and society"]},{"w":"misnomer","m":["a misleading or inaccurate name"]},{"w":"negligent","m":["lacking care or attention"]},{"w":"obsequious","m":["excessively submissive to authority"]},{"w":"placate","m":["decrease someone's anger or other negative emotion"]},{"w":"proclivity","m":["a fondness or liking for something"]},{"w":"puerile","m":["immature and childish"]},{"w":"quixotic","m":["excessively visionary; unfeasible"]},{"w":"spendthrift","m":["someone who spends money recklessly"]},{"w":"taciturn","m":["of few words; speaking little"]},{"w":"wary","m":["exercising caution; careful"]}],[{"w":"adulterate","m":["damage the quality of; corrupt"]},{"w":"advocate","m":["support; be in favor of","someone who supports a cause, organization, or person"]},{"w":"aggrandize","m":["enhance one's power or standing"]},{"w":"alacrity","m":["eagerness to do something"]},{"w":"ambivalent","m":["having conflicting emotions; unsure"]},{"w":"ameliorate","m":["improve a bad feeling or bad situation"]},{"w":"amenable","m":["(of a person) receptive to change; open","(of a thing) responsive to"]},{"w":"anachronistic","m":["of the wrong time or era"]},{"w":"audacious","m":["bold; unafraid of risks","rude; exhibiting disrespect"]},{"w":"avaricious","m":["greedy; always wanting more"]},{"w":"banal","m":["unoriginal and dull; lacking creativity"]},{"w":"benign","m":["harmless; having little effect","(of a person's character) kind hearted; nice"]},{"w":"brazen","m":["shameless and excessively forward"]},{"w":"calumny","m":["slander and defamation"]},{"w":"candid","m":["honest; without deception"]},{"w":"castigate","m":["scold someone harshly"]},{"w":"caustic","m":["(of speech) hostile and bitter","(of a chemical) corrosive; acidic"]},{"w":"construe","m":["understand something subjectively"]},{"w":"contrite","m":["feeling regretful or guilty"]},{"w":"convoluted","m":["difficult to understand or follow"]},{"w":"covet","m":["strongly desire; yearn for"]},{"w":"craven","m":["lacking bravery; weak-kneed"]},{"w":"decorum","m":["politeness and proper behavior"]},{"w":"deft","m":["highly proficient; skilled"]},{"w":"demur","m":["hesitate or object; express doubt","hesitation"]},{"w":"derivative","m":["based on someone else's work (often used in a negative sense)"]},{"w":"desiccate","m":["dry out; remove all moisture"]},{"w":"diatribe","m":["an angry rant; verbal abuse"]},{"w":"incredulous","m":["doubtful and disbelieving"]},{"w":"ingenuous","m":["naive and lacking experience"]}],[{"w":"abate","m":["decrease in intensity; lessen"]},{"w":"abjure","m":["strongly reject (an idea); forgo"]},{"w":"anomalous","m":["differing from what is normal; atypical"]},{"w":"antipathy","m":["profound hostility or hatred"]},{"w":"arcane","m":["comprehended by very few people; secret"]},{"w":"arduous","m":["very challenging; needing great effort"]},{"w":"artless","m":["naive; inexperienced","plain and simple","lacking skill"]},{"w":"ascetic","m":["(of a lifestyle) very strict and lacking luxury","someone who adopts an ascetic lifestyle"]},{"w":"assuage","m":["decrease a negative feeling","fulfill a certain desire"]},{"w":"betray","m":["unknowingly disclose or reveal"]},{"w":"bucolic","m":["associated with tranquil rural life"]},{"w":"burgeon","m":["quickly increase or grow; skyrocket"]},{"w":"cacophonous","m":["extremely noisy; grating"]},{"w":"canonize","m":["treat like a god; deeply venerate"]},{"w":"censure","m":["strongly criticize or disapprove"]},{"w":"chicanery","m":["using deception to attain a certain goal"]},{"w":"coalesce","m":["bring elements together; unite"]},{"w":"cogent","m":["persuasive and clear; compelling"]},{"w":"compelling","m":["persuasive and clear","attracting interest; fascinating"]},{"w":"contend","m":["argue a certain point of view; assert","compete","struggle or attempt to overcome something"]},{"w":"copious","m":["existing in great supply; abundant"]},{"w":"cosmopolitan","m":["(of a city) highly diverse","(of a person) sophisticated and urbane"]},{"w":"deference","m":["high regard and respect; esteem"]},{"w":"desultory","m":["unplanned; without enthusiasm"]},{"w":"diffident","m":["reserved or shy; without confidence"]},{"w":"dilatory","m":["slow and unhurried; meant to stall"]},{"w":"equivocate","m":["speak evasively; avoid taking a stance"]},{"w":"polarize","m":["separate into two opposing groups"]},{"w":"prodigal","m":["carelessly wasteful; extravagant","a person who is excessively wasteful"]},{"w":"verbose","m":["excessively talkative; wordy"]}],[{"w":"abstain","m":["avoid taking part in something"]},{"w":"approbation","m":["appreciation toward someone"]},{"w":"cherish","m":["greatly love or protect something"]},{"w":"corroborate","m":["lend support to; bolster"]},{"w":"disparate","m":["different or contrasting"]},{"w":"emulate","m":["imitate someone or something"]},{"w":"enervate","m":["sap the energy out of someone; fatigue"]},{"w":"ephemeral","m":["extremely short lasting"]},{"w":"fervid","m":["excessively energetic or eager"]},{"w":"garrulous","m":["tending to talk too much; wordy"]},{"w":"incendiary","m":["provocative; causing conflict"]},{"w":"inimical","m":["damaging; hostile in manner or tone"]},{"w":"intimate","m":["subtly suggest or imply"]},{"w":"invigorate","m":["provide energy or vitality to"]},{"w":"mitigate","m":["diminish negative feelings or situation"]},{"w":"obsolete","m":["no longer useful; outmoded"]},{"w":"opaque","m":["unclear; hard to comprehend","not able to be seen through"]},{"w":"paradigmatic","m":["representing the standard example"]},{"w":"pedantic","m":["overly concerned with (minor) details"]},{"w":"placid","m":["calm; free from activity or irritation"]},{"w":"polemical","m":["giving a strong, controversial opinion"]},{"w":"precipitate","m":["cause to happen","done quickly or suddenly"]},{"w":"profundity","m":["great wisdom or intelligence"]},{"w":"prophetic","m":["able to correctly predict the future"]},{"w":"prudent","m":["wise in decision-making"]},{"w":"punctilious","m":["highly concerned with details or manners"]},{"w":"recondite","m":["obscure and difficult to understand"]},{"w":"scrupulous","m":["careful with details","possessing moral integrity"]},{"w":"tranquil","m":["peaceful; free from activity"]},{"w":"vacillate","m":["go back and forth with one's view"]}],[{"w":"aloof","m":["not warm or friendly; impersonal"]},{"w":"clangor","m":["a disturbingly loud noise"]},{"w":"conventional","m":["adhering to established practices or accepted standards"]},{"w":"debunk","m":["prove a belief or idea false"]},{"w":"diminutive","m":["exceptionally small in size or stature"]},{"w":"discernible","m":["able to be recognized or understood"]},{"w":"enigmatic","m":["hard to understand; mysterious"]},{"w":"estranged","m":["emotionally distanced from someone"]},{"w":"extravagant","m":["excessive, especially in terms of cost"]},{"w":"fanciful","m":["highly imaginative; unrealistic"]},{"w":"frivolous","m":["lacking in seriousness or importance; silly","(of a person) not taking things seriously"]},{"w":"heterogeneous","m":["composed of varying, diverse elements"]},{"w":"imperious","m":["having an arrogant or domineering manner"]},{"w":"impertinent","m":["disrespectful or inappropriate","irrelevant or unrelated to something"]},{"w":"invasive","m":["infringing on others privacy","spreading rapidly and causing harm"]},{"w":"irresolute","m":["uncertain or lacking determination"]},{"w":"laudable","m":["worthy of admiration or praise"]},{"w":"lax","m":["not diligent or careful; casual"]},{"w":"marginalize","m":["treat someone or something as insignificant"]},{"w":"panache","m":["a stylish and confident manner"]},{"w":"plodding","m":["moving slowly or laboriously"]},{"w":"prosaic","m":["straightforward; unoriginal; unimaginative"]},{"w":"remedial","m":["serving to correct or cure something"]},{"w":"restive","m":["demonstrating difficulty in staying still"]},{"w":"sporadic","m":["happening occasionally and irregularly"]},{"w":"stigmatize","m":["label or mark as disgraceful"]},{"w":"undermine","m":["weaken or sabotage, often subtly"]},{"w":"utterly","m":["completely; totally"]},{"w":"weary","m":["feeling tired or exhausted"]},{"w":"zealous","m":["intensely passionate"]}],[{"w":"admonish","m":["scold someone seriously","give someone urgent advice"]},{"w":"aesthetic","m":["pertaining to beauty or the appreciation thereof"]},{"w":"affectation","m":["a pretense or show meant to impress others"]},{"w":"alleviate","m":["lessen the intensity or severity of something negative"]},{"w":"analogous","m":["comparable or similar to"]},{"w":"bolster","m":["lend support or boost"]},{"w":"chauvinistic","m":["excessively patriotic or biased in favor of a group or cause"]},{"w":"connoisseur","m":["a discerning expert in matters of taste"]},{"w":"dissemble","m":["hide or misrepresent one's true feelings or beliefs"]},{"w":"dogged","m":["demonstrating tenacity and an unwillingness to give up"]},{"w":"dupe","m":["trick or fool someone"]},{"w":"empirical","m":["based on observation or experience rather than conjecture"]},{"w":"engender","m":["produce or stimulate the development of something"]},{"w":"entitled","m":["assuming oneself to be deserving of special rights or privileges"]},{"w":"pertinacious","m":["stubbornly holding onto a belief or course of action"]},{"w":"presumptuous","m":["overstepping boundaries, often in an overconfident way"]},{"w":"probity","m":["the characteristic of having strong ethical standards"]},{"w":"proliferate","m":["rapidly increase or multiply in number"]},{"w":"specious","m":["seemingly reasonable but actually wrong"]},{"w":"spurious","m":["not genuine; bogus"]},{"w":"subjective","m":["pertaining to personal feelings rather than objective reality"]},{"w":"subvert","m":["undermine or weaken, typically an authority of some sort"]},{"w":"timorous","m":["displaying nervousness; lacking confidence"]},{"w":"tortuous","m":["marked by numerous twists or turns","overly complicated and long"]},{"w":"tractable","m":["easily managed or controlled","(of a situation) easy to solve or handle"]},{"w":"transient","m":["not lasting, enduring, or permanent; transitory"]},{"w":"ubiquitous","m":["being everywhere at once"]},{"w":"underscore","m":["emphasize or show the importance of something"]},{"w":"venal","m":["open to bribery or corruption"]},{"w":"venerate","m":["regard with deep respect or reverence"]}],[{"w":"appease","m":["calm someone down","satisfy a demand or desire"]},{"w":"arbitrary","m":["determined by chance, not reason"]},{"w":"archaic","m":["ancient or outmoded; out of date"]},{"w":"clamorous","m":["characterized by extremely loud noise"]},{"w":"dearth","m":["lack of something in a particular area"]},{"w":"explicable","m":["able to be explained or understood"]},{"w":"hyperbole","m":["exaggeration to make a point or be funny"]},{"w":"immutable","m":["not capable of being changed"]},{"w":"indefatigable","m":["highly determined; resistent to tiring out"]},{"w":"indolent","m":["habitually lazy; averse to activity"]},{"w":"insular","m":["limited in outlook or experience; narrow"]},{"w":"intransigent","m":["refusing to compromise; stubborn"]},{"w":"intrepid","m":["resolutely fearless; brave"]},{"w":"irreverent","m":["lacking proper respect or seriousness"]},{"w":"loathe","m":["dislike greatly, often with disgust"]},{"w":"malign","m":["evil and harmful","speak about someone in a bitter and critical manner"]},{"w":"malleable","m":["changeable or flexible; capable of being influenced"]},{"w":"neophyte","m":["an amateur or novice in a field"]},{"w":"plastic","m":["capable of being molded; flexible","artificial; unnatural"]},{"w":"platitude","m":["a trite or banal remark or statement"]},{"w":"prescient","m":["possessing foresight of upcoming events"]},{"w":"pristine","m":["in its original, unspoiled state"]},{"w":"reproach","m":["express criticism towards; reprimand"]},{"w":"robust","m":["capable of surviving despite adverse conditions","(of an object, person, or organization) strong and powerful"]},{"w":"salubrious","m":["promoting health or well-being","(of a place or accommodation) pleasant"]},{"w":"sanction","m":["authorize; permit","penalize; punish"]},{"w":"sedulous","m":["paying attention to details; diligent"]},{"w":"soporific","m":["causing sleep or lethargy"]},{"w":"stern","m":["hard, harsh, or severe in manner"]},{"w":"tendentious","m":["biased toward a particular view, often a provocative one"]}],[{"w":"accentuate","m":["give emphasis or draw attention to something"]},{"w":"conjectural","m":["pertaining to a guess or inference made with limited data"]},{"w":"convivial","m":["demonstrating a jovial nature or a fondness for festivities and companionship"]},{"w":"decadent","m":["displaying excessive indulgence, sometimes to a morally degenerate extent"]},{"w":"egregious","m":["remarkably bad or shocking, to a conspicuous degree"]},{"w":"evanescent","m":["vanishing or fading away quickly, like mist or a phantom"]},{"w":"flamboyant","m":["characterized by a showy, confident, or audacious display"]},{"w":"forestall","m":["prevent something by taking strategic action in advance"]},{"w":"gainsay","m":["deny or refute an assertion or argument"]},{"w":"galvanize","m":["inspire or stir up to action or heightened activity"]},{"w":"indiscriminate","m":["lacking selectivity or judgment, often with potentially harmful effects"]},{"w":"innocuous","m":["harmless, having no ill effect"]},{"w":"momentary","m":["lasting for a brief moment or interval"]},{"w":"mundane","m":["commonplace or ordinary, lacking excitement"]},{"w":"nettlesome","m":["causing irritation or annoyance"]},{"w":"nullify","m":["to render ineffective, cancel out or invalidate"]},{"w":"obviate","m":["sidestep or bypass a potential problem or difficulty"]},{"w":"omnipresent","m":["existing or seeming to exist everywhere at once"]},{"w":"oust","m":["displace or eject from a position or place"]},{"w":"palpable","m":["able to be touched or felt; so intense it seems tangible"]},{"w":"perfidy","m":["act of betrayal or unfaithfulness"]},{"w":"profuse","m":["abundant, plentiful, or occurring in large amounts"]},{"w":"pugnacious","m":["quick to engage in a conflict or argument; combative"]},{"w":"sagacious","m":["demonstrating wisdom or sound judgment"]},{"w":"sanguine","m":["cheerfully optimistic, particularly in a difficult situation"]},{"w":"scant","m":["hardly sufficient, meager, or minimal"]},{"w":"skullduggery","m":["sneaky or dishonest actions"]},{"w":"trivial","m":["of minor significance or value"]},{"w":"utilitarian","m":["emphasizing practicality and functionality over aesthetics"]},{"w":"vapid","m":["uninteresting, lacking flavor or spark"]}],[{"w":"boorish","m":["rude or unrefined in manners or behavior"]},{"w":"brook","m":["to tolerate or endure something, especially an annoyance"]},{"w":"circumspect","m":["cautious or wary, especially when considering potential consequences"]},{"w":"comity","m":["a courteous harmony or mutual respect toward others"]},{"w":"commensurate","m":["comparable in size, extent, or degree; proportionate"]},{"w":"cordial","m":["characterized by warmth and sincerity"]},{"w":"deleterious","m":["having a harmful effect"]},{"w":"dichotomy","m":["a split into two contrasting or opposite parts"]},{"w":"edify","m":["enlighten or uplift through knowledge; teach"]},{"w":"elicit","m":["extract a reply or action; provoke"]},{"w":"erudite","m":["possessing great knowledge, typically from study or research"]},{"w":"fecund","m":["fertile or highly productive"]},{"w":"feeble","m":["weak; deficient in strength"]},{"w":"felicitous","m":["well-suited or apt","causing delight or satisfaction"]},{"w":"forbear","m":["refrain or abstain from doing something"]},{"w":"haphazard","m":["lacking clear planning, order, or direction"]},{"w":"hodgepodge","m":["a mixture or assortment of different things"]},{"w":"impede","m":["obstruct or hinder progress"]},{"w":"impetuous","m":["rash or hasty in action or decision"]},{"w":"irascible","m":["easily angered or irritated"]},{"w":"mercenary","m":["motivated primarily by a desire for monetary or material gain"]},{"w":"meticulous","m":["exhibiting great care to detail"]},{"w":"mordant","m":["biting or sharply critical in thought or expression"]},{"w":"outstrip","m":["surpass or do better than"]},{"w":"precarious","m":["uncertain and likely to cause danger"]},{"w":"quirky","m":["unusual in an endearing or peculiar way"]},{"w":"repudiate","m":["reject or refute"]},{"w":"tact","m":["skill in handling difficult situations without causing offense"]},{"w":"trifling","m":["lacking significance or importance"]},{"w":"turbulent","m":["full of conflict or chaos"]}],[{"w":"acumen","m":["quickness and keenness in understanding and judgment"]},{"w":"antithesis","m":["the direct opposite or contrast"]},{"w":"ascribe","m":["attribute or credit something to a particular cause or source"]},{"w":"befuddled","m":["confused, bewildered, or perplexed"]},{"w":"eschew","m":["intentionally avoid or abstain from"]},{"w":"esoteric","m":["understood by few or a small group of people"]},{"w":"evasive","m":["indirect or not straightforward; avoiding confrontation"]},{"w":"exculpate","m":["clear from blame or guilt"]},{"w":"expedite","m":["accelerate or speed up a process or action"]},{"w":"fastidious","m":["showing great care and attention to detail; hard to please"]},{"w":"feign","m":["pretend or simulate"]},{"w":"furtive","m":["sneaky or secretive, especially due to guilt"]},{"w":"hamper","m":["obstruct or hinder progress"]},{"w":"indispensable","m":["completely necessary; essential"]},{"w":"lament","m":["express deep sorrow or regret"]},{"w":"myopic","m":["short-sighted; lacking creativity"]},{"w":"nonchalant","m":["appearing casually calm or indifferent"]},{"w":"partial","m":["prejudiced or biased toward one side"]},{"w":"pensive","m":["deep in thought"]},{"w":"portend","m":["indicate or warn that something, often unpleasant, is going to happen"]},{"w":"provincial","m":["narrow in perspective; not sophisticated"]},{"w":"rudimentary","m":["basic or elementary; in the earliest stages of development"]},{"w":"salutary","m":["beneficial, especially in promoting health or well-being"]},{"w":"sever","m":["cut off or put an end to"]},{"w":"slight","m":["treat with disrespect or neglect; insult"]},{"w":"somnolent","m":["sleepy or drowsy"]},{"w":"stoic","m":["unaffected by pain or distress; showing no emotion"]},{"w":"supersede","m":["replace or take the place of"]},{"w":"tout","m":["promote or praise energetically"]},{"w":"wane","m":["decrease in power, size, or intensity"]}],[{"w":"abhor","m":["detest or regard with deep hatred"]},{"w":"boisterous","m":["energetic, noisy, and lively"]},{"w":"chivalrous","m":["honorable and polite"]},{"w":"churlish","m":["rude or lacking good manners"]},{"w":"clandestine","m":["secretive; avoiding attention"]},{"w":"complacent","m":["smugly self-satisfied, often without awareness of potential dangers"]},{"w":"cumbersome","m":["large, heavy, slow or complicated"]},{"w":"debilitating","m":["weakening or impairing strength"]},{"w":"deliberate","m":["think over or discuss carefully","intentional"]},{"w":"droll","m":["amusing in a quirky or unusual way"]},{"w":"eccentric","m":["deviating from conventional behavior; quirky"]},{"w":"fractious","m":["quarrelsome and irritable; unruly"]},{"w":"limpid","m":["clear, transparent, or easy to understand"]},{"w":"mawkish","m":["overly sentimental in a way that seems exaggerated or insincere"]},{"w":"obeisance","m":["reverence for an individual"]},{"w":"ostentatious","m":["showy or designed to impress"]},{"w":"panacea","m":["a perfect cure for something"]},{"w":"perfunctory","m":["done without enthusiasm or effort"]},{"w":"perilous","m":["risky and hazardous"]},{"w":"pervasive","m":["spreading quickly and in great numbers"]},{"w":"preclude","m":["prevent something from occurring"]},{"w":"predilection","m":["preference or bias towards something"]},{"w":"rapacious","m":["very greedy"]},{"w":"relish","m":["take great pleasure or delight in"]},{"w":"satirical","m":["using humor or irony to criticize or mock"]},{"w":"sham","m":["fake; not genuine"]},{"w":"skirt","m":["go around or avoid something, especially an issue or obstacle"]},{"w":"sluggish","m":["lacking energy; slow and listless"]},{"w":"spartan","m":["marked by simplicity, frugality, and avoidance of luxury"]},{"w":"truculent","m":["aggressively combative or confrontational"]}],[{"w":"acrimonious","m":["bitter and sharp in language or tone"]},{"w":"belligerent","m":["argumentative, threatening, or aggressive"]},{"w":"beneficent","m":["kind and charitable, producing good results or benefits"]},{"w":"canny","m":["shrewd and cautious"]},{"w":"cavalier","m":["exhibiting an overly casual attitude; unconcerned"]},{"w":"distressed","m":["experiencing nervousness, irritation, or sadness"]},{"w":"dwindling","m":["decreasing steadily in size or quantity"]},{"w":"eclipse","m":["overshadow or surpass"]},{"w":"encyclopedic","m":["thorough; comprehensive in scope"]},{"w":"exacerbate","m":["make a situation or condition worse"]},{"w":"exasperated","m":["severely irritated or angry"]},{"w":"fungible","m":["interchangeable for another item of a similar type"]},{"w":"hackneyed","m":["lacking creativity; derivative and overused"]},{"w":"incongruous","m":["out of place; lacking harmony"]},{"w":"interchangeable","m":["capable of being used in place of each other"]},{"w":"laconic","m":["economical with words; quiet and reserved"]},{"w":"lucrative","m":["producing a significant amount of money"]},{"w":"magisterial","m":["possessing great authority","exercising authority in an excessive manner"]},{"w":"onerous","m":["involving a heavy burden; challenging or difficult"]},{"w":"opprobrium","m":["severe criticism or public shame"]},{"w":"parsimonious","m":["extremely frugal or stingy"]},{"w":"peripheral","m":["of marginal importance; minor"]},{"w":"provocative","m":["causing outrage or irritation, often intentionally"]},{"w":"renounce","m":["reject or give up"]},{"w":"tempestuous","m":["(of emotions or actions) unrestrained and turbulent","(of weather) extremely stormy"]},{"w":"tenable","m":["(of an idea or method) justifiable and rational"]},{"w":"transgression","m":["a violation of a law, rule, or social norm"]},{"w":"urbane","m":["refined, sophisticated, and courteous"]},{"w":"verisimilitude","m":["appearance or semblance of truth or reality; believability"]},{"w":"vitiate","m":["impair or corrupt the quality of something"]}],[{"w":"affinity","m":["a natural liking or connection to a person, thing, or idea","a similarity between two things"]},{"w":"altruistic","m":["showing generosity and concern for the welfare of others"]},{"w":"baroque","m":["overly detailed or ornamental"]},{"w":"byzantine","m":["overly complex or intricate"]},{"w":"compromise","m":["weaken or diminish in quality, character, or value"]},{"w":"conciliatory","m":["intended to appease or calm someone down"]},{"w":"countenance","m":["accept or permit","the look of a person's face or expression"]},{"w":"covert","m":["hidden or concealed; not openly practiced"]},{"w":"credible","m":["able to be trusted; persuasive"]},{"w":"diffuse","m":["spread or disperse widely","scattered over a large area"]},{"w":"documentary","m":["based on or reproducing real events or facts"]},{"w":"exhaustive","m":["thorough and comprehensive"]},{"w":"exhilarating","m":["intensely exciting"]},{"w":"extraneous","m":["lacking relevance; unnecessary"]},{"w":"fervor","m":["intense enthusiasm toward something"]},{"w":"futile","m":["incapable of resulting in anything worthwhile"]},{"w":"illusory","m":["unreal or based on illusion"]},{"w":"invidious","m":["likely to cause resentment or envy","unfair; prejudiced against someone or something"]},{"w":"lethargic","m":["sluggish; tired"]},{"w":"metaphorical","m":["symbolic rather than literal"]},{"w":"mimic","m":["to imitate or copy someone or something"]},{"w":"numinous","m":["having a spiritual or divine quality"]},{"w":"obscure","m":["not clearly expressed or understood","making something unclear and vague"]},{"w":"overt","m":["open and observable; not hidden or secret"]},{"w":"pellucid","m":["transparently clear in meaning or style","(of a body of water or substance) transparent and clear"]},{"w":"perpetuate","m":["make (something) continue for an indefinite time"]},{"w":"rational","m":["based on clear thought or reason"]},{"w":"scathing","m":["harshly or bitterly critical; vitriolic"]},{"w":"subtle","m":["delicate or slight; not obvious"]},{"w":"superficial","m":["existing, occurring, or located on the surface","not profound or thorough"]}],[{"w":"acquiesce","m":["agree or consent quietly without objection"]},{"w":"adroit","m":["deft, dexterous, or skillful"]},{"w":"amend","m":["make changes to a document, law, or statement, usually to improve it"]},{"w":"animus","m":["strong dislike or enmity; hostile attitude"]},{"w":"apologist","m":["a person who defends or supports something that is being criticized"]},{"w":"astringent","m":["sharp or harsh in demeanor or style"]},{"w":"collaborate","m":["work together on a project","cooperate deviously with an enemy"]},{"w":"competent","m":["having sufficient skill, knowledge, ability, or qualifications"]},{"w":"correlate","m":["show a mutual relationship or connection between two or more things"]},{"w":"deride","m":["ridicule or mock"]},{"w":"dictate","m":["give orders or commands"]},{"w":"discreet","m":["respectful of privacy or secrecy; inconspicuous"]},{"w":"divorced","m":["separate from something that was previously connected"]},{"w":"elitist","m":["a person who believes in the rule of an elite or privileged group","believing oneself or a group to be superior to others"]},{"w":"exacting","m":["requiring a lot of care, effort, or attention"]},{"w":"flummoxed","m":["completely unable to understand; bewildered"]},{"w":"fruitful","m":["producing good or abundant results"]},{"w":"inborn","m":["present from birth; innate"]},{"w":"polymath","m":["a person with extraordinarily broad and comprehensive knowledge"]},{"w":"reticent","m":["keeping one's thoughts and opinions to oneself; reserved or restrained"]},{"w":"stringent","m":["strict or severe; tight"]},{"w":"subservient","m":["obedient to an authority or other people","less important; inferior to"]},{"w":"surreptitious","m":["done secretly or stealthily"]},{"w":"tantalizing","m":["arousing desire or interest without fulfillment"]},{"w":"tantamount","m":["equivalent in effect or value"]},{"w":"torpor","m":["a state of apathy or lethargy"]},{"w":"trenchant","m":["keen and biting; vigorously articulate"]},{"w":"umbrage","m":["a feeling of anger or annoyance caused by something offensive"]},{"w":"versatile","m":["having varied uses or many functions; capable of doing many things"]},{"w":"wayward","m":["obstinate, contrary and unpredictable"]}],[{"w":"alienate","m":["make someone feel isolated and estranged"]},{"w":"apathy","m":["lack of interest or enthusiasm towards something"]},{"w":"apropos","m":["appropriate or relevant to the situation"]},{"w":"apt","m":["suitable or appropriate","having a tendency toward something","quick to learn"]},{"w":"cloak","m":["conceal or disguise"]},{"w":"consensus","m":["general agreement among the members of a group"]},{"w":"distort","m":["give a false or misleading account of"]},{"w":"divergent","m":["growing further apart; disagreeing"]},{"w":"elated","m":["very happy or proud"]},{"w":"enchant","m":["capture the attention or to charm"]},{"w":"entrenched","m":["firmly ingrained and unlikely to change"]},{"w":"exotic","m":["foreign, especially in an exciting way"]},{"w":"exploitative","m":["taking unfair advantage of a person, group, or situation"]},{"w":"foreseeable","m":["able to be predicted or expected"]},{"w":"forsake","m":["abandon or give up"]},{"w":"gratify","m":["please or satisfy; make content"]},{"w":"heed","m":["mind or regard with care; pay attention"]},{"w":"judicious","m":["having, characterized by, or done with good judgment or sound thinking"]},{"w":"lucid","m":["clear and easy to understand"]},{"w":"pertinent","m":["important with regard to (a subject or matter); pertaining; relevant"]},{"w":"propriety","m":["conformity to established standards of good or proper behavior"]},{"w":"scintillating","m":["brilliantly or impressively clever, exciting, amusing or witty"]},{"w":"sensational","m":["exaggerated for effect, often sacrificing accuracy"]},{"w":"sophisticated","m":["experienced, worldly, or cultured","advanced or intricate, often in tech"]},{"w":"strife","m":["conflict or struggle"]},{"w":"understated","m":["expressed in a subtle, restrained, or low-key manner"]},{"w":"unscrupulous","m":["without moral principles"]},{"w":"veracity","m":["conformity to truth or accuracy"]},{"w":"virulent","m":["extremely hostile or malicious; intensely acrimonious"]},{"w":"volatile","m":["likely to change unpredictably and quickly (usually for the worse)"]}],[{"w":"antedate","m":["occur before (something) in time"]},{"w":"banish","m":["expel from a place, especially as punishment; get rid of"]},{"w":"bridle","m":["control or restrain"]},{"w":"comply","m":["obey someone's rules or wishes; meet certain standards"]},{"w":"crestfallen","m":["disappointed, dispirited, or depressed"]},{"w":"curtail","m":["restrict or limit; decrease in quantity"]},{"w":"elucidate","m":["make clear; clarify or shed light on"]},{"w":"evade","m":["avoid or escape from, typically in a cunning way","deflect from giving a clear answer"]},{"w":"feckless","m":["without skill, ineffective, incompetent"]},{"w":"fester","m":["(of a negative feeling or a problem) worsen, especially due to lack of attention"]},{"w":"iconoclastic","m":["challenging or overthrowing tradition or established beliefs"]},{"w":"immure","m":["imprison or isolate"]},{"w":"improvise","m":["create something spontaneously without preparation"]},{"w":"inhibit","m":["make difficult to accomplish; act as an obstacle"]},{"w":"inscrutable","m":["not easily understood; mysterious"]},{"w":"lionize","m":["treat someone as a celebrity or hero"]},{"w":"monotonous","m":["lacking in variety, repetitively dull"]},{"w":"peculiar","m":["strange or unusual; specific to a particular place or group"]},{"w":"premeditate","m":["consider or plan beforehand"]},{"w":"profligate","m":["inclined to waste resources or behave extravagantly"]},{"w":"reconcile","m":["bring back or return to harmony; restore a relationship"]},{"w":"refine","m":["purify; bring to a pure state","improve in accuracy or excellence"]},{"w":"relinquish","m":["give up or release a claim, right, or possession"]},{"w":"ruminate","m":["meditate or reflect; ponder over"]},{"w":"skittish","m":["easily scared or startled; timid; difficult to control"]},{"w":"superfluous","m":["more than is necessary; excessive"]},{"w":"synoptic","m":["providing a general overview or summary"]},{"w":"thorough","m":["careful and complete concerning every detail"]},{"w":"visionary","m":["showing foresight or imagination"]},{"w":"vociferous","m":["expressing opinions or feelings loudly and forcefully"]}],[{"w":"acclaim","m":["praise with great approval","enthusiastic approval"]},{"w":"ascertain","m":["find out or learn with certainty"]},{"w":"assertive","m":["confident and direct in claiming one's rights or expressing ideas"]},{"w":"bogus","m":["fake or fraudulent"]},{"w":"cataclysmic","m":["causing great disruption or upheaval"]},{"w":"circumscribe","m":["limit or restrict something narrowly"]},{"w":"complementary","m":["enhancing or perfecting when combined with something else"]},{"w":"contentious","m":["causing or likely to provoke disagreement"]},{"w":"disingenuous","m":["pretending to be sincere or straightforward"]},{"w":"divulge","m":["disclose or reveal information"]},{"w":"dogmatic","m":["insisting on one's ideas without being open to others'"]},{"w":"fallacious","m":["false or mistaken"]},{"w":"foolhardy","m":["recklessly daring; careless"]},{"w":"hinder","m":["obstruct or delay progress"]},{"w":"impair","m":["weaken or affect negatively"]},{"w":"impugn","m":["challenge the truth or honesty of something"]},{"w":"incessant","m":["constant or unending (of something bad or unpleasant)"]},{"w":"inclined","m":["feeling a tendency or preference towards"]},{"w":"inveterate","m":["deep-rooted or long-established"]},{"w":"miserly","m":["reluctant to spend or share; greedy"]},{"w":"patent","m":["clear or obvious"]},{"w":"petulant","m":["irritable or impatient, especially over minor issues"]},{"w":"pithy","m":["expressing ideas in a concise, meaningful manner"]},{"w":"pliant","m":["flexible or easily influenced"]},{"w":"sanctimonious","m":["giving the impression that one is morally superior"]},{"w":"sound","m":["based on reason, sense, or judgment"]},{"w":"tarnish","m":["compromise, damage, or sully"]},{"w":"tepid","m":["exhibiting little passion or eagerness; lukewarm"]},{"w":"upbraid","m":["criticize or scold severely"]},{"w":"vexation","m":["the state of being irritated or incensed"]}],[{"w":"abet","m":["assist or encourage, usually in wrongdoing"]},{"w":"accessible","m":["clear; capable of being understood"]},{"w":"acquisitive","m":["eager to acquire and possess things"]},{"w":"amalgamate","m":["merge or combine two or more things"]},{"w":"attenuate","m":["weaken or lessen in force or thickness"]},{"w":"augment","m":["increase or make larger"]},{"w":"aversion","m":["an intense or definite dislike"]},{"w":"blithe","m":["showing indifference"]},{"w":"contempt","m":["the feeling or attitude of regarding someone or something as inferior"]},{"w":"dawdle","m":["move slowly and without purpose"]},{"w":"deflect","m":["change the direction or course of something; make someone deviate"]},{"w":"discount","m":["regard something as being unimportant or incorrect"]},{"w":"dissident","m":["one who disagrees or opposes authority"]},{"w":"efficacious","m":["producing the desired effect; successful"]},{"w":"equitable","m":["characterized by fairness and justice"]},{"w":"erratic","m":["unpredictable and inconsistent"]},{"w":"industrious","m":["hard-working and persistent"]},{"w":"inform","m":["give form or character to something or someone"]},{"w":"irksome","m":["causing annoyance or irritation"]},{"w":"manacle","m":["(used figuratively) restrain, limit, or secure something"]},{"w":"modest","m":["unassuming about one's abilities or not boastful","limited in quantity or amount"]},{"w":"noxious","m":["harmful; injurious"]},{"w":"pernicious","m":["causing harm in a subtle way; deadly"]},{"w":"predicament","m":["a challenging or awkward situation"]},{"w":"proficient","m":["good at something; skilled"]},{"w":"prolix","m":["using an excessive amount of words; long-winded"]},{"w":"scorn","m":["express strong disapproval or contempt for","a feeling or display of contempt or disdain"]},{"w":"subordinate","m":["having a lower rank; less important","treat as of less value or importance","a person who is under or less important than another"]},{"w":"unseemly","m":["not proper or in good taste"]},{"w":"veritable","m":["(used to emphasize something) true; genuine"]}],[{"w":"acolyte","m":["a person who assists or follows another person or cause"]},{"w":"anoint","m":["appoint or designate for a particular role or purpose"]},{"w":"base","m":["lacking principles; morally wrong"]},{"w":"coercion","m":["the act of persuading or forcing someone to do something using threats or violence"]},{"w":"coin","m":["invent or devise a new word or phrase"]},{"w":"cunning","m":["showing skill in achieving one's ends through deceit or evasion"]},{"w":"discomfit","m":["make someone feel uneasy or embarrassed"]},{"w":"dissent","m":["hold or express an opinion that varies from a prevailing or official position","difference of opinion or disagreement"]},{"w":"distill","m":["extract the most important information from something"]},{"w":"dubious","m":["(of a person's feeling) suspicious of","(of a thing or concept) not to be relied upon"]},{"w":"ebullient","m":["cheerful and joyful"]},{"w":"facetious","m":["treating serious issues with inappropriate humor"]},{"w":"fallible","m":["capable of making an error"]},{"w":"florid","m":["excessively complicated; including too many details"]},{"w":"gawky","m":["awkward or clumsy"]},{"w":"inveigle","m":["persuade someone to do something using flattery or deception"]},{"w":"jettison","m":["abandon or discard (something that is no longer needed)"]},{"w":"mendacity","m":["dishonesty"]},{"w":"munificent","m":["more generous than is usual or necessary"]},{"w":"naive","m":["showing a lack of experience or judgment"]},{"w":"noble","m":["having high moral qualities or principles"]},{"w":"parochial","m":["having a limited perspective; narrow-minded"]},{"w":"pedestrian","m":["lacking imagination or excitement; ordinary"]},{"w":"prevaricate","m":["evade or dodge the truth by being evasive"]},{"w":"prime","m":["prepare something for use or action","of primary importance; major"]},{"w":"radical","m":["far-reaching; major","a person advocating thorough or complete social or political reform"]},{"w":"recrudescent","m":["breaking out again; reviving"]},{"w":"temporal","m":["relating to time","relating to worldly rather than spiritual matters"]},{"w":"transitory","m":["not permanent; temporary"]},{"w":"viable","m":["capable of working or succeeding; feasible"]}],[{"w":"abreast","m":["informed or familiar about a particular topic"]},{"w":"confound","m":["perplex or puzzle someone"]},{"w":"digression","m":["an aside that strays from the main subject"]},{"w":"discrepancy","m":["a difference between two or more things that should be the same"]},{"w":"duplicitous","m":["deceptive in speech or action"]},{"w":"expedient","m":["affording short-term benefits, often at the expense of the long-term"]},{"w":"fabricate","m":["invent in order to deceive"]},{"w":"glum","m":["appearing or feeling sad or despondent"]},{"w":"harbinger","m":["a person or thing that foreshadows or foretells the coming of someone or something"]},{"w":"intrinsic","m":["belonging to the essential nature of a thing"]},{"w":"largesse","m":["the trait of being willing to donate money or resources; generosity"]},{"w":"libertine","m":["someone loose in morals; a pleasure-seeker"]},{"w":"malfeasance","m":["wrongdoing or misconduct, especially by a public official"]},{"w":"manifest","m":["be revealed; show plainly","obvious; not obscure or hidden"]},{"w":"minute","m":["very small"]},{"w":"modish","m":["in the current fashion or style"]},{"w":"nascent","m":["in the process of emerging, being born, or starting to develop"]},{"w":"perennial","m":["lasting or remaining active throughout the year, or all the time"]},{"w":"pious","m":["deeply devout; exhibiting religious devotion","making a show of one's own virtue"]},{"w":"providential","m":["happening at a fortunate or opportune time"]},{"w":"prowess","m":["skillfulness and dexterity"]},{"w":"schism","m":["a split or separation within a group or organization"]},{"w":"slander","m":["baselessly speak ill of someone or something"]},{"w":"stalwart","m":["determined; staunch"]},{"w":"supplicate","m":["make a humble request; beg or beseech"]},{"w":"terse","m":["brief and to the point"]},{"w":"tirade","m":["a prolonged, vehement speech or criticism"]},{"w":"universal","m":["applicable or common to all purposes, conditions, or situations"]},{"w":"vanquish","m":["defeat completely"]},{"w":"woeful","m":["very sad","very bad; awful"]}],[{"w":"abject","m":["most unfortunate or miserable"]},{"w":"amicable","m":["characterized by goodwill and friendliness"]},{"w":"animosity","m":["strong hostility or resentment"]},{"w":"aver","m":["assert with confidence"]},{"w":"barrage","m":["an overwhelming concentration of something, typically hostile words"]},{"w":"cathartic","m":["that which releases emotional tension"]},{"w":"decipher","m":["decode or determine the meaning of something that is difficult to understand"]},{"w":"delusion","m":["a belief that is not true or is founded on false premises"]},{"w":"dispense","m":["issue, distribute, or give out","do without or get rid of"]},{"w":"eloquent","m":["fluently persuasive and articulate"]},{"w":"enthrall","m":["captivate or charm"]},{"w":"eradicate","m":["eliminate or destroy completely"]},{"w":"fledgling","m":["untried or inexperienced; emergent or rising"]},{"w":"fortitude","m":["mental strength and courage that allows one to face challenges"]},{"w":"fortuitous","m":["happening by chance, especially a lucky chance"]},{"w":"goad","m":["incite or provoke"]},{"w":"imminent","m":["about to happen soon"]},{"w":"incontrovertible","m":["undeniable; impossible to dispute"]},{"w":"itinerant","m":["habitually traveling from place to place"]},{"w":"magnanimous","m":["noble and generous in spirit"]},{"w":"meritorious","m":["deserving of merit or commendation; deserving reward"]},{"w":"mutiny","m":["a rebellion against authority; violent strife"]},{"w":"paradoxical","m":["seemingly contradictory but nonetheless possibly true"]},{"w":"perseverance","m":["persistence in an action or belief despite difficulties or opposition"]},{"w":"render","m":["make or provide"]},{"w":"repertoire","m":["the collection of skills, methods, or performances that one is ready to use"]},{"w":"resilient","m":["able to recover quickly from difficult situations"]},{"w":"resolute","m":["firmly determined or unwavering"]},{"w":"supple","m":["pliant, flexible, or easy to bend"]},{"w":"valor","m":["strength of mind in the face of danger; bravery"]}],[{"w":"arresting","m":["attracting attention or striking"]},{"w":"chastise","m":["criticize harshly"]},{"w":"cumbersome","m":["large, heavy, slow or complicated"]},{"w":"economy","m":["frugal or effective use of resources or words"]},{"w":"elementary","m":["basic and fundamental"]},{"w":"embellish","m":["make more beautiful or attractive by adding ornamentation","making something sound or look better than it is in reality"]},{"w":"euphoric","m":["intensely happy or excited"]},{"w":"exonerate","m":["clear from accusation or blame"]},{"w":"extrapolate","m":["predict by projecting past experience or data"]},{"w":"falter","m":["weaken or waver, especially in the face of difficulty; hesitate"]},{"w":"fervent","m":["exhibiting enthusiasm and zeal"]},{"w":"foment","m":["incite or cause troublesome acts; encourage"]},{"w":"gaffe","m":["a foolish and embarrassing error, especially a public one"]},{"w":"heterodox","m":["deviating from what is acceptable or commonly believed"]},{"w":"histrionic","m":["overly dramatic or emotional"]},{"w":"implicit","m":["suggested though not directly expressed"]},{"w":"inviolate","m":["not violated; free from hurt of any kind"]},{"w":"liability","m":["something or someone that creates a risk or disadvantage"]},{"w":"obstinate","m":["stubbornly adhering to an opinion, purpose, or cause"]},{"w":"painstaking","m":["done with careful attention to detail"]},{"w":"phlegmatic","m":["calm and unemotional disposition"]},{"w":"prodigious","m":["impressively large in size or extent"]},{"w":"propensity","m":["an inclination or tendency to behave or think in a certain way"]},{"w":"qualm","m":["a feeling of apprehension or doubt"]},{"w":"renege","m":["fail to fulfill a promise or obligation"]},{"w":"stint","m":["supply an insufficient amount of something"]},{"w":"temper","m":["to moderate or neutralize something"]},{"w":"tentative","m":["uncertain; subject to future change"]},{"w":"unprecedented","m":["never before seen, done or experienced"]},{"w":"vivacious","m":["lively and animated in spirit"]}],[{"w":"allusive","m":["making indirect references or hints"]},{"w":"astute","m":["having the ability to notice and understand things clearly"]},{"w":"commence","m":["begin or start"]},{"w":"convalescent","m":["recovering from illness or treatment"]},{"w":"curb","m":["restrict or control"]},{"w":"decry","m":["publicly criticize or condemn"]},{"w":"duress","m":["compulsion by threat or force"]},{"w":"evoke","m":["bring to mind or produce a reaction"]},{"w":"fawn","m":["display exaggerated affection or flattery, usually to gain favor"]},{"w":"fret","m":["be constantly or visibly worried or anxious"]},{"w":"glib","m":["fluent but insincere and shallow"]},{"w":"headstrong","m":["determined to have one's own way; stubborn"]},{"w":"intermittent","m":["occurring at irregular intervals; not continuous"]},{"w":"ire","m":["anger or wrath"]},{"w":"languid","m":["casual and relaxed; slow","weak from disease or weariness"]},{"w":"lull","m":["a brief pause or period of calm; soothe or calm"]},{"w":"mettlesome","m":["spirited and brave"]},{"w":"mollify","m":["calm or reduce the anger or anxiety of someone"]},{"w":"neutralize","m":["counteract or cancel the effect of something"]},{"w":"nonplussed","m":["unsure about what to say or do; confused"]},{"w":"precipitous","m":["extremely steep","(of an action) done quickly and without care"]},{"w":"pretentious","m":["attempting to impress by affecting greater importance than is actually possessed"]},{"w":"profound","m":["(of a person or idea) having deep insight or knowledge"]},{"w":"propagate","m":["spread or promote widely"]},{"w":"recourse","m":["a source of help or strategies used in a difficult situation"]},{"w":"refute","m":["prove to be wrong or false"]},{"w":"regress","m":["return to an earlier or worse state"]},{"w":"repercussion","m":["an unintended consequence of an event or action"]},{"w":"replenish","m":["fill something up again"]},{"w":"vigilant","m":["keeping careful watch for dangers or difficulties"]}],[{"w":"assail","m":["attack physically or verbally"]},{"w":"benevolent","m":["showing kindness or goodwill"]},{"w":"berate","m":["scold or criticize harshly"]},{"w":"buoyant","m":["lighthearted and lively; having a cheerful attitude"]},{"w":"buttress","m":["support or reinforce"]},{"w":"condone","m":["forgive, excuse, or overlook"]},{"w":"contravene","m":["go against or violate a rule, law, or convention"]},{"w":"denounce","m":["criticize or speak out against"]},{"w":"despotic","m":["of a ruler with absolute power; tyrannical"]},{"w":"deviate","m":["go off course from; stray from some norm"]},{"w":"disinterested","m":["unbiased"]},{"w":"escalate","m":["increase or intensify"]},{"w":"exorcize","m":["drive out (such as an evil spirit or some other thing) from a person, place, or thing"]},{"w":"finicky","m":["fussy or hard to please"]},{"w":"foil","m":["prevent (something) from being accomplished"]},{"w":"intertwined","m":["twisted or linked closely together"]},{"w":"inundate","m":["flood or overwhelm"]},{"w":"ironclad","m":["unbreakable or extremely strong"]},{"w":"jeopardize","m":["put in danger; threaten"]},{"w":"mercurial","m":["having a volatile character; fickle"]},{"w":"oblivious","m":["not aware of or not noticing something"]},{"w":"perpetrate","m":["commit something (often a crime); carry out"]},{"w":"plaintive","m":["expressing sorrow or melancholy"]},{"w":"poignant","m":["emotionally moving"]},{"w":"quiescent","m":["being at rest; inactive or quiet"]},{"w":"reiterate","m":["say or do again, multiple times"]},{"w":"subside","m":["become lower; decrease; become less intense"]},{"w":"subsume","m":["include or contain something else"]},{"w":"surmount","m":["overcome something, typically a challenge"]},{"w":"tangential","m":["only superficially relevant"]}],[{"w":"adept","m":["well skilled; completely versed"]},{"w":"adverse","m":["unfavorable or opposed to one's interests or desire"]},{"w":"appropriate","m":["take something forcefully, usually without the owner's agreement","suitable or fit for a situation"]},{"w":"archetype","m":["a typical example of something"]},{"w":"articulate","m":["able to express ideas or feelings fluently and clearly"]},{"w":"auspicious","m":["favorable and indicative of good luck"]},{"w":"bereft","m":["lacking or mourning something or someone"]},{"w":"captious","m":["fault-finding (especially petty ones)"]},{"w":"conclusive","m":["without doubt"]},{"w":"conspire","m":["secretly work together for something bad"]},{"w":"delineate","m":["describe or depict precisely; outline"]},{"w":"disentangle","m":["free from entanglement or confusion; make clear"]},{"w":"exhort","m":["strongly persuade, encourage, or urge"]},{"w":"frailty","m":["quality or state of being weak; weakness"]},{"w":"grievance","m":["an issue or problem"]},{"w":"harangue","m":["a long angry rant"]},{"w":"ploy","m":["a strategy or tactic used to gain an advantage"]},{"w":"poise","m":["a state of balance, equilibrium or stability"]},{"w":"pomposity","m":["the quality of being pompous; self-importance"]},{"w":"proxy","m":["a substitute (usually for a person) that is compatible"]},{"w":"relent","m":["abandon a harsh intention or attitude by giving in","reduce in intensity"]},{"w":"rhetoric","m":["persuasive speech or writing"]},{"w":"rigor","m":["thoroughness and strictness"]},{"w":"sparse","m":["not dense and meager; having widely spaced intervals"]},{"w":"steadfast","m":["fixed or unchanging; steady"]},{"w":"suspect","m":["viewed with suspicion"]},{"w":"tedious","m":["boring and slow, without variety"]},{"w":"vitality","m":["strength and energy"]},{"w":"whimsical","m":["playful or silly","unpredictable"]},{"w":"yield","m":["produce or generate a result, product, or amount","give up or surrender"]}],[{"w":"apprehension","m":["fearful anticipation or worry"]},{"w":"ardent","m":["full of passion and enthusiasm"]},{"w":"axiomatic","m":["evident without proof or argument; self-evident"]},{"w":"cease","m":["to stop happening or continuing"]},{"w":"conducive","m":["helping to bring about or promote a particular outcome"]},{"w":"corporeal","m":["associated with the physical body, not the spirit or soul"]},{"w":"doctrinaire","m":["rigidly sticking to theoretical ideas, rather than being practical"]},{"w":"eclectic","m":["derived from a diverse range of sources or styles"]},{"w":"equanimity","m":["evenness of mind, especially under stress"]},{"w":"exorbitant","m":["going far beyond what is fair, reasonable, or expected"]},{"w":"fickle","m":["quick to change one’s opinion or allegiance"]},{"w":"figurative","m":["symbolic rather than literal"]},{"w":"flustered","m":["agitated or confused"]},{"w":"gullible","m":["easily deceived or tricked"]},{"w":"idiosyncratic","m":["peculiar to an individual or group; unique"]},{"w":"incidental","m":["secondary or non-essential part of something"]},{"w":"ingrained","m":["deeply rooted or established"]},{"w":"insolent","m":["boldly disrespectful or rude"]},{"w":"lampoon","m":["satirize or poke fun at"]},{"w":"lavish","m":["extravagant, luxurious, or abundant","give out extremely generously"]},{"w":"lugubrious","m":["appearing sad or gloomy"]},{"w":"macabre","m":["having a quality of horror or grimness"]},{"w":"morose","m":["sullen and gloomy"]},{"w":"officious","m":["overbearingly assertive, especially in offering unwanted advice or help"]},{"w":"ramification","m":["a consequence or resulting action of a previous event"]},{"w":"serene","m":["calm, quiet, and peaceful"]},{"w":"supplant","m":["replace or take the place of"]},{"w":"tacit","m":["implied without being directly expressed"]},{"w":"transcend","m":["pass beyond the limits of something"]},{"w":"treatise","m":["a written work that provides a systematic and detailed examination of a subject"]}],[{"w":"antagonize","m":["act in opposition to or provoke hostility from"]},{"w":"barren","m":["incapable of producing offspring or fruit; unproductive"]},{"w":"bombastic","m":["high-sounding but with little meaning; overfilled"]},{"w":"cajole","m":["persuade through flattery or gentle urging"]},{"w":"chary","m":["being wary or cautiously reluctant"]},{"w":"curmudgeon","m":["an ill-tempered person full of stubborn opinions"]},{"w":"dirge","m":["a mournful song, especially for a funeral or mourning"]},{"w":"estimable","m":["deserving of respect or admiration"]},{"w":"euphemism","m":["a mild or polite term used to substitute a harsh or offensive one"]},{"w":"excoriate","m":["criticize strongly; condemn"]},{"w":"exigent","m":["requiring immediate action or aid; urgent"]},{"w":"haughty","m":["exhibiting arrogant and condescending pride"]},{"w":"heady","m":["intoxicating or stupefying"]},{"w":"imperturbable","m":["not easily annoyed, upset, or excited; calm"]},{"w":"implacable","m":["not able to be appeased"]},{"w":"lambaste","m":["scold, reprimand, or criticize harshly"]},{"w":"miscreant","m":["one who has behaved badly, or illegally"]},{"w":"peccadillo","m":["a small flaw or sin"]},{"w":"philistine","m":["a person who is ignorant or uneducated"]},{"w":"relegate","m":["consign to a place or position of insignificance, lower rank, or inferiority"]},{"w":"repugnant","m":["offensive or repulsive; arousing disgust or aversion"]},{"w":"sentimental","m":["characterized by feelings or nostalgia"]},{"w":"squander","m":["spend profusely or recklessly"]},{"w":"swindle","m":["obtain money by fraudulent or deceitful methods"]},{"w":"tangible","m":["capable of being touched; real or actual"]},{"w":"turpitude","m":["wickedness or moral corruption"]},{"w":"unalloyed","m":["pure; without any adulterations"]},{"w":"undercut","m":["undermine; weaken"]},{"w":"wheedle","m":["attempt to persuade by flattery"]},{"w":"xenophobic","m":["showing a fear or hatred of strangers or foreigners"]}],[{"w":"abeyance","m":["suspension; temporary suppression"]},{"w":"abstract","m":["present in thought or concept but lacking physical existence","removing something or considering something separate"]},{"w":"affront","m":["an open or intentional offense, slight, or insult"]},{"w":"agitate","m":["make someone disturbed or excited"]},{"w":"august","m":["noble and respected; awe-inspiring"]},{"w":"burnish","m":["improve or enhance"]},{"w":"coy","m":["being bashful, shy, or retiring"]},{"w":"deprecate","m":["belittle or express disapproval of"]},{"w":"disdain","m":["contempt; a feeling that something is unworthy of respect"]},{"w":"disperse","m":["scatter in different directions"]},{"w":"distend","m":["extend or expand, as from internal pressure; swell"]},{"w":"endemic","m":["regularly found and restricted to a particular area or population"]},{"w":"enmity","m":["the quality of being an enemy; hostility"]},{"w":"gauche","m":["awkward or lacking in social graces"]},{"w":"hysterical","m":["wildly emotional or exaggerated in reaction"]},{"w":"impudent","m":["not showing due respect; bold-faced, impertinent"]},{"w":"inchoate","m":["recently started but not fully formed yet"]},{"w":"penchant","m":["taste, liking, or inclination"]},{"w":"quandary","m":["a dilemma; a difficult decision or situation"]},{"w":"quarantine","m":["place into isolation to prevent the spread of any contagious disease"]},{"w":"quash","m":["void or suppress"]},{"w":"quibble","m":["complain or argue in a trivial or petty manner"]},{"w":"ravage","m":["devastate, destroy, or lay waste to something"]},{"w":"recant","m":["withdraw or repudiate a statement or opinion formerly expressed, especially formally and publicly"]},{"w":"redoubtable","m":["eliciting respect or fear; notably formidable"]},{"w":"retiring","m":["introverted and shy; liking privacy"]},{"w":"shrill","m":["high-pitched and piercing in sound quality"]},{"w":"sophistry","m":["plausible yet fallacious argumentations or reasoning"]},{"w":"substantiate","m":["verify something by supplying evidence"]},{"w":"wily","m":["sly, cunning, full of tricks"]}],[{"w":"abscond","m":["leave hurriedly and secretly, typically to avoid capture"]},{"w":"apogee","m":["the peak or highest point of something"]},{"w":"aspersion","m":["a critical or damaging remark or criticism"]},{"w":"bawdy","m":["humorously dealing with sexual subjects; risqué in a comedic way"]},{"w":"chagrin","m":["a feeling of frustration, annoyance, or anger"]},{"w":"collude","m":["secretly cooperate for deceitful or fraudulent purposes"]},{"w":"commiserate","m":["express sympathy or sorrow with someone who has experienced misfortune"]},{"w":"conflagration","m":["a large, destructive fire"]},{"w":"contretemps","m":["a small disagreement or mishap"]},{"w":"conviction","m":["a strong belief or principle held with confidence"]},{"w":"croon","m":["sing softly, typically in a sentimental manner"]},{"w":"depose","m":["forcibly remove someone from office or power"]},{"w":"detente","m":["a period of improved relations between countries, especially when tensions have been high"]},{"w":"dowdy","m":["lacking style or elegance; out of fashion"]},{"w":"echelon","m":["a level or tier within a system or organization"]},{"w":"ennui","m":["a feeling of boredom and dissatisfaction due to a lack of excitement or interest"]},{"w":"expatiate","m":["talk or write in great detail about a topic"]},{"w":"fraught","m":["filled with tension, stress, or negative emotions"]},{"w":"fulcrum","m":["the main factor or element that plays a pivotal role in a situation"]},{"w":"imbroglio","m":["a complex and confusing situation, often of a messy or controversial nature"]},{"w":"jocund","m":["merry and in high spirits; exhibiting happiness"]},{"w":"languish","m":["become weak or feeble, often from neglect or lack of attention"]},{"w":"nadir","m":["the absolute lowest point or worst moment"]},{"w":"nimble","m":["quick and agile in movement or thinking"]},{"w":"ominous","m":["indicating that something unfavorable is likely to happen"]},{"w":"outlandish","m":["strange, unusual, or bizarre in appearance or style"]},{"w":"propitious","m":["favorable; advantageous"]},{"w":"prurient","m":["displaying or prompting an undue interest in sexual matters"]},{"w":"sadistic","m":["taking pleasure in causing pain or suffering to others"]},{"w":"zenith","m":["the point at which something attains its maximum strength or power"]}],[{"w":"aberrant","m":["deviating from what is normal or expected"]},{"w":"abide","m":["tolerate, follow, or accept"]},{"w":"bravado","m":["a display of boldness or confidence, often feigned"]},{"w":"callow","m":["young and inexperienced; immature"]},{"w":"capitulate","m":["surrender or give up resistance"]},{"w":"cogitate","m":["think deeply; ponder or reflect"]},{"w":"deportment","m":["behavior or manners"]},{"w":"extemporize","m":["improvise, especially in speech or performance"]},{"w":"factious","m":["causing division or disagreement"]},{"w":"fallow","m":["(of farmland) not cultivated; barren","(of a period of time) inactive"]},{"w":"feint","m":["a deceptive movement or action"]},{"w":"flagrant","m":["noticeably offensive; blatant"]},{"w":"gratuitous","m":["unwarranted; without justification"]},{"w":"grovel","m":["show submission or fear; beg for favor"]},{"w":"indecorous","m":["not in good taste; inappropriate or unseemly"]},{"w":"intrigue","m":["a secret scheme or plot","provoke interest in"]},{"w":"nominal","m":["in name only","insubstantial; insignificant"]},{"w":"obdurate","m":["stubborn; unyielding"]},{"w":"obstreperous","m":["noisy, unruly, or hard to control"]},{"w":"odious","m":["highly offensive; repugnant"]},{"w":"plucky","m":["showing courage or determination"]},{"w":"precocious","m":["showing advanced skills or development earlier than usual"]},{"w":"remuneration","m":["payment or compensation for services or work"]},{"w":"slovenly","m":["untidy, especially in personal appearance","without care; neglectful"]},{"w":"soliloquy","m":["a speech in a drama where a character talks to themselves, expressing inner thoughts"]},{"w":"spurn","m":["reject or refuse disdainfully"]},{"w":"stolid","m":["not easily moved or emotional"]},{"w":"temerity","m":["reckless boldness or audacity"]},{"w":"tenuous","m":["thin or weak"]},{"w":"verve","m":["energy, enthusiasm, or vigor"]}],[{"w":"abrogate","m":["formally cancel or do away with"]},{"w":"aghast","m":["shocked or horrified; struck with amazement"]},{"w":"apprise","m":["inform, notify, or advise"]},{"w":"beguile","m":["charm or deceive in a captivating way"]},{"w":"boon","m":["a good thing; a blessing or a benefit"]},{"w":"callous","m":["emotionally unfeeling or insensitive"]},{"w":"coddle","m":["pamper or treat with excessive care"]},{"w":"crescendo","m":["the loudest or highest point of something"]},{"w":"extenuating","m":["lessening the seriousness by providing excuses"]},{"w":"frenetic","m":["fast-paced or wildly energetic"]},{"w":"fringe","m":["unconventional, extreme, or marginal"]},{"w":"hapless","m":["unlucky or unfortunate"]},{"w":"immaculate","m":["spotlessly clean or free from errors"]},{"w":"obfuscate","m":["obscure or confuse"]},{"w":"ossify","m":["harden or become unchanging"]},{"w":"pastiche","m":["a work that either imitates the style of multiple other works or combines elements from various works"]},{"w":"perspicacious","m":["keenly perceptive or understanding"]},{"w":"ponderous","m":["heavy or slow-moving, often due to weight; extremely dull"]},{"w":"recluse","m":["a person who lives in self-imposed isolation"]},{"w":"retaliate","m":["take revenge or counteract"]},{"w":"rhapsody","m":["an ecstatic expression of feeling or enthusiasm"]},{"w":"serendipitous","m":["occurring by chance in a fortunate way"]},{"w":"shirk","m":["avoid or neglect a responsibility or duty"]},{"w":"sinecure","m":["a job requiring minimal effort but offering a salary"]},{"w":"sinuous","m":["winding or having many smooth turns"]},{"w":"sordid","m":["involving ignoble actions and motives"]},{"w":"stanch","m":["stop or reduce the flow of"]},{"w":"surfeit","m":["an excessive amount of something"]},{"w":"ulterior","m":["concealed, typically with a hidden motive"]},{"w":"voluble","m":["speaking a lot, with great ease, often about unimportant matters"]}],[{"w":"abstruse","m":["difficult to comprehend or understand"]},{"w":"auxiliary","m":["supplementary or additional, often in support"]},{"w":"caricature","m":["exaggerate features for comedic or satirical effect"]},{"w":"depravity","m":["the state or condition of being depraved or morally corrupted"]},{"w":"dilettante","m":["a person with an amateur interest in the arts or a particular field"]},{"w":"effrontery","m":["insolent or bold behavior"]},{"w":"encroach","m":["intrude or trespass, especially on another's territory or rights"]},{"w":"endow","m":["enrich or furnish with some faculty or quality"]},{"w":"entreat","m":["ask earnestly or anxiously; beg"]},{"w":"gregarious","m":["sociable and enjoying the company of others"]},{"w":"indictment","m":["an official formal accusation for a criminal offense"]},{"w":"indignant","m":["feeling or expressing strong displeasure at something unjust or offensive"]},{"w":"ineluctable","m":["inescapable or inevitable"]},{"w":"inquisitive","m":["curious or eager to acquire knowledge"]},{"w":"latitude","m":["scope to do something; relative freedom from restrictions"]},{"w":"levity","m":["humor or lightness, especially when inappropriate"]},{"w":"malevolent","m":["showing ill will or wishing harm to others"]},{"w":"mediate","m":["intervene between parties to bring about a resolution"]},{"w":"occlude","m":["block or stop up; cover"]},{"w":"pacify","m":["bring peace to or calm someone down"]},{"w":"paragon","m":["a model of excellence or perfection"]},{"w":"patronize","m":["treat with an apparent kindness that is condescending","be a regular customer of a store or other establishment"]},{"w":"penurious","m":["extremely poor or stingy"]},{"w":"piquant","m":["stimulating to the senses; engaging; charming"]},{"w":"rampant","m":["unrestrained or unchecked, usually in a negative manner"]},{"w":"remote","m":["not likely to happen"]},{"w":"reprobate","m":["a person who is immoral or who lacks principles"]},{"w":"turbid","m":["(of water) muddy or opaque due to suspended particles","unclear; confused; obscure"]},{"w":"turgid","m":["swollen or bloated","overly complex and difficult to understand"]},{"w":"vacuous","m":["lacking intelligence or thought"]}]];</script>
+<script src="gre-hooks.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Constants ---------- */
+  var PROGRESS_KEY = 'sk-gre-progress-v1';
+  var NOTES_KEY = 'sk-gre-notes-v1';
+  var INTERVALS = [0, 1, 3, 7, 14, 30];        // days until next review, by box
+  var MAX_BOX = INTERVALS.length - 1;
+  var WELL_KNOWN_BOX = 4;
+  var AGAIN_GAP = 4;                             // a missed card returns after about this many cards
+  var NEW_BATCH = 15;
+  var PIC_MAX = 480;                             // uploaded pictures are shrunk to fit this many pixels
+  var HOOK_MAX = 300;
+  var STOP = ('with that from into onto than then them they this those these their there what when where which while whom whose ' +
+    'something someone somebody thing things person people often usually especially typically generally sometimes ' +
+    'being been have having very more most much other others such about over under also only just like used upon').split(' ');
+  var STOPSET = {}; STOP.forEach(function (w) { STOPSET[w] = true; });
+
+  /* ---------- Data ---------- */
+  // GROUPS: array of arrays of word keys. WORDS: key -> { w, m: [senses], groups: [n] }.
+  var WORDS = {}, GROUPS = [], ORDER = [];
+  window.GRE_DATA.forEach(function (group, gi) {
+    var keys = [];
+    group.forEach(function (entry) {
+      var key = entry.w.toLowerCase();
+      if (!WORDS[key]) { WORDS[key] = { w: entry.w, m: entry.m, groups: [] }; ORDER.push(key); }
+      if (WORDS[key].groups.indexOf(gi + 1) < 0) WORDS[key].groups.push(gi + 1);
+      keys.push(key);
+    });
+    GROUPS.push(keys);
+  });
+  var HOOKS = (window.GRE_HOOKS && typeof window.GRE_HOOKS === 'object') ? window.GRE_HOOKS : {};
+
+  /* ---------- Small helpers ---------- */
+  function $(id) { return document.getElementById(id); }
+  function el(tag, attrs, kids) {
+    var n = document.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach(function (k) {
+      if (k === 'text') n.textContent = attrs[k];
+      else if (k === 'class') n.className = attrs[k];
+      else if (k.slice(0, 2) === 'on') n.addEventListener(k.slice(2), attrs[k]);
+      else if (attrs[k] !== false && attrs[k] != null) n.setAttribute(k, attrs[k] === true ? '' : attrs[k]);
+    });
+    (kids || []).forEach(function (c) { if (c != null) n.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); });
+    return n;
+  }
+  function svgIcon(path, cls) {
+    var s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    s.setAttribute('viewBox', '0 0 24 24'); s.setAttribute('aria-hidden', 'true'); if (cls) s.setAttribute('class', cls);
+    s.innerHTML = path; return s;
+  }
+  var ICON_OK = '<path d="M5 12.5l4.5 4.5L19 7.5"/>';
+  var ICON_NO = '<path d="M6 6l12 12M18 6L6 18"/>';
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+  function announce(msg) { var l = $('live'); l.textContent = ''; setTimeout(function () { l.textContent = msg; }, 30); }
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : (many || one + 's')); }
+
+  /* ---------- Dates (local calendar days) ---------- */
+  function ymd(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function today() { return ymd(new Date()); }
+  function addDays(n) { var d = new Date(); d.setHours(12, 0, 0, 0); d.setDate(d.getDate() + n); return ymd(d); }
+  var DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+  /* ---------- Storage: localStorage with an in-memory fallback ---------- */
+  var memory = {}, warned = false;
+  function showNotice(msg) {
+    var n = $('notice'); n.textContent = '';
+    n.appendChild(el('span', { text: msg }));
+    n.appendChild(el('button', { class: 'btn small ghost', type: 'button', text: 'Dismiss', 'aria-label': 'Dismiss message', onclick: function () { n.hidden = true; } }));
+    n.hidden = false;
+  }
+  function storageProblem() {
+    if (warned) return; warned = true;
+    showNotice('This browser is not saving your progress, so it will last only until you close this page. Use Export to keep a copy.');
+  }
+  function readJSON(key) {
+    if (Object.prototype.hasOwnProperty.call(memory, key)) return memory[key];
+    try { var raw = window.localStorage.getItem(key); return raw ? JSON.parse(raw) : null; }
+    catch (e) { storageProblem(); return null; }
+  }
+  function writeJSON(key, value) {
+    memory[key] = value;
+    try { window.localStorage.setItem(key, JSON.stringify(value)); return true; }
+    catch (e) { storageProblem(); return false; }
+  }
+
+  function cleanProgress(raw) {
+    var out = { v: 1, words: {}, days: [] };
+    if (!raw || typeof raw !== 'object') return out;
+    var words = raw.words && typeof raw.words === 'object' ? raw.words : {};
+    Object.keys(words).forEach(function (k) {
+      var r = words[k];
+      if (!WORDS[k] || !r || typeof r !== 'object') return;
+      var b = Math.round(Number(r.b));
+      out.words[k] = {
+        b: isFinite(b) ? Math.max(0, Math.min(MAX_BOX, b)) : 0,
+        d: typeof r.d === 'string' && DATE_RE.test(r.d) ? r.d : today(),
+        n: Math.max(0, Math.round(Number(r.n)) || 0)
+      };
+    });
+    if (Array.isArray(raw.days)) {
+      var seen = {};
+      raw.days.forEach(function (d) { if (typeof d === 'string' && DATE_RE.test(d)) seen[d] = true; });
+      out.days = Object.keys(seen).sort().slice(-800);
+    }
+    return out;
+  }
+  function cleanNotes(raw) {
+    var out = {};
+    if (!raw || typeof raw !== 'object') return out;
+    Object.keys(raw).forEach(function (k) {
+      var n = raw[k];
+      if (!WORDS[k] || !n || typeof n !== 'object') return;
+      var h = typeof n.h === 'string' ? n.h.trim().slice(0, HOOK_MAX) : '';
+      var img = typeof n.img === 'string' && /^data:image\/(jpeg|png|webp);base64,/.test(n.img) && n.img.length < 600000 ? n.img : '';
+      if (h || img) out[k] = { h: h, img: img };
+    });
+    return out;
+  }
+  var progress = cleanProgress(readJSON(PROGRESS_KEY));
+  var notes = cleanNotes(readJSON(NOTES_KEY));
+  function saveProgress() { return writeJSON(PROGRESS_KEY, progress); }
+  function saveNotes() { return writeJSON(NOTES_KEY, notes); }
+
+  /* ---------- Spaced repetition (Leitner boxes) ---------- */
+  function rec(key) { return progress.words[key] || null; }
+  function isDue(key) { var r = rec(key); return !!r && r.d <= today(); }
+  function isNew(key) { return !rec(key); }
+  function nextBox(key, rating) {
+    var r = rec(key), b = r ? r.b : 0;
+    if (rating === 'again') return 0;
+    if (rating === 'good') return Math.min(MAX_BOX, r ? b + 1 : 1);
+    return Math.min(MAX_BOX, Math.max(b + 2, 3));
+  }
+  function grade(key, rating) {
+    var box = nextBox(key, rating), r = rec(key);
+    progress.words[key] = { b: box, d: addDays(INTERVALS[box]), n: (r ? r.n : 0) + 1 };
+    var t = today();
+    if (progress.days[progress.days.length - 1] !== t) progress.days.push(t);
+    saveProgress();
+  }
+  function intervalText(box) { var d = INTERVALS[box]; return d === 0 ? 'later today' : 'in ' + plural(d, 'day'); }
+  function status(key) {
+    var r = rec(key);
+    if (!r) return { cls: '', text: 'New' };
+    if (r.d <= today()) return { cls: 'due', text: 'Due today' };
+    if (r.b >= WELL_KNOWN_BOX) return { cls: 'known', text: 'Well known' };
+    return { cls: 'learning', text: 'Learning' };
+  }
+  function dueKeys(keys) {
+    return (keys || ORDER).filter(isDue).sort(function (a, b) { return rec(a).d < rec(b).d ? -1 : rec(a).d > rec(b).d ? 1 : 0; });
+  }
+  function newKeys(keys) { return (keys || ORDER).filter(isNew); }
+  function uniq(keys) { var s = {}; return keys.filter(function (k) { if (s[k]) return false; s[k] = true; return true; }); }
+  function streak() {
+    var set = {}; progress.days.forEach(function (d) { set[d] = true; });
+    var n = 0, offset = set[today()] ? 0 : -1;
+    while (set[addDays(offset - n)]) n++;
+    return n;
+  }
+
+  /* ---------- Memory hooks ---------- */
+  function hookFor(key) {
+    var mine = notes[key] || {}, file = HOOKS[key] || {};
+    return {
+      text: mine.h || (typeof file.h === 'string' ? file.h : ''),
+      emoji: typeof file.e === 'string' ? file.e : '',
+      img: mine.img || '',
+      mine: !!(mine.h || mine.img)
+    };
+  }
+  function shrinkImage(file) {
+    return new Promise(function (resolve, reject) {
+      if (!file || !/^image\//.test(file.type)) { reject(new Error('Please choose an image file.')); return; }
+      if (file.size > 20 * 1024 * 1024) { reject(new Error('That image is too large. Please pick one under 20 MB.')); return; }
+      var url = URL.createObjectURL(file), img = new Image();
+      img.onload = function () {
+        var scale = Math.min(1, PIC_MAX / Math.max(img.naturalWidth, img.naturalHeight));
+        var c = document.createElement('canvas');
+        c.width = Math.max(1, Math.round(img.naturalWidth * scale)); c.height = Math.max(1, Math.round(img.naturalHeight * scale));
+        var ctx = c.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height);
+        ctx.drawImage(img, 0, 0, c.width, c.height);
+        URL.revokeObjectURL(url);
+        resolve(c.toDataURL('image/jpeg', 0.82));
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); reject(new Error('That image could not be read.')); };
+      img.src = url;
+    });
+  }
+  // The "Remember it" panel, used on flashcards and in quiz feedback. onChange re-renders the host.
+  function rememberPanel(key, onChange) {
+    var h = hookFor(key), word = WORDS[key].w;
+    var pic = el('div', { class: 'pic' + (h.img || h.emoji ? '' : ' empty') });
+    if (h.img) pic.appendChild(el('img', { src: h.img, alt: 'Your picture for ' + word }));
+    else if (h.emoji) pic.appendChild(el('span', { role: 'img', 'aria-label': 'Picture for ' + word, text: h.emoji }));
+    var body = el('div', null, [el('h3', { text: 'Remember it' })]);
+    var box = el('div', { class: 'remember' }, [pic, body]);
+    if (h.text) {
+      body.appendChild(el('p', { text: h.text }));
+      body.appendChild(el('button', { class: 'linkish', type: 'button', text: h.mine ? 'Edit my hook' : 'Write my own hook or picture', onclick: openEditor }));
+    } else {
+      if (h.img) body.appendChild(el('p', { class: 'src', text: 'Your picture.' }));
+      body.appendChild(el('button', { class: 'linkish', type: 'button', text: h.img ? 'Edit my hook or picture' : 'Add my own hook or picture', onclick: openEditor }));
+    }
+    function openEditor() {
+      if (box.querySelector('.editor')) return;
+      var mine = notes[key] || { h: '', img: '' }, pending = mine.img;
+      var id = 'hk-' + key.replace(/[^a-z]/g, '');
+      var ta = el('textarea', { id: id, maxlength: String(HOOK_MAX), placeholder: 'A picture or phrase that makes ' + word + ' stick' });
+      ta.value = mine.h || '';
+      var file = el('input', { type: 'file', id: id + '-pic', accept: 'image/*' });
+      var err = el('p', { class: 'err', role: 'alert' });
+      var note = el('p', { class: 'src', text: pending ? 'You have a picture saved for this word.' : '' });
+      file.addEventListener('change', function () {
+        err.textContent = ''; note.textContent = 'Preparing picture…';
+        shrinkImage(file.files[0]).then(function (data) { pending = data; note.textContent = 'Picture ready. Save to keep it.'; })
+          .catch(function (e) { note.textContent = ''; err.textContent = e.message; });
+      });
+      var editor = el('div', { class: 'editor' }, [
+        el('label', { for: id, text: 'Your memory hook' }), ta,
+        el('label', { for: id + '-pic', text: 'Your picture (optional)' }), file, note, err,
+        el('div', { class: 'row' }, [
+          el('button', { class: 'btn small primary', type: 'button', text: 'Save', onclick: function () {
+            var text = ta.value.trim().slice(0, HOOK_MAX);
+            var next = Object.assign({}, notes);
+            if (text || pending) next[key] = { h: text, img: pending || '' }; else delete next[key];
+            var prev = notes; notes = next;
+            if (!saveNotes() && pending && pending !== (prev[key] || {}).img) {
+              err.textContent = 'The picture could not be saved in this browser (storage may be full). It will show until you close this page.';
+            }
+            announce('Memory hook saved for ' + word + '.');
+            onChange();
+          } }),
+          el('button', { class: 'btn small', type: 'button', text: 'Cancel', onclick: function () { onChange(); } }),
+          (mine.h || mine.img) ? el('button', { class: 'btn small ghost', type: 'button', text: 'Remove mine', onclick: function () {
+            var next = Object.assign({}, notes); delete next[key]; notes = next; saveNotes();
+            announce('Your hook for ' + word + ' was removed.'); onChange();
+          } }) : null
+        ])
+      ]);
+      box.appendChild(editor);
+      ta.focus();
+    }
+    return box;
+  }
+
+  /* ---------- Views and routing ---------- */
+  var VIEWS = ['home', 'cards', 'quiz', 'words'];
+  var session = null, quiz = null, wordsGroup = 0;
+  function show(name) {
+    VIEWS.forEach(function (v) { $('v-' + v).hidden = v !== name; });
+    window.scrollTo(0, 0);
+  }
+  function go(hash) { if (location.hash === hash) route(); else location.hash = hash; }
+  function route() {
+    var h = location.hash.replace(/^#\/?/, '');
+    var m = /^words\/(\d+)$/.exec(h);
+    if (h === 'cards' && session) { show('cards'); renderCard(true); return; }
+    if (h === 'quiz' && quiz) { show('quiz'); renderQuiz(true); return; }
+    if (m && GROUPS[+m[1] - 1]) { wordsGroup = +m[1]; show('words'); renderWords(); return; }
+    session = null; quiz = null;
+    show('home'); renderHome();
+    if (h && h !== '') history.replaceState(null, '', location.pathname + location.search);
+  }
+  window.addEventListener('hashchange', route);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-home]'), function (b) { b.addEventListener('click', function () { go('#'); }); });
+
+  /* ---------- Home ---------- */
+  function renderHome() {
+    var keys = Object.keys(progress.words);
+    var due = dueKeys(), fresh = newKeys();
+    $('stStarted').textContent = keys.length;
+    $('stKnown').textContent = keys.filter(function (k) { return progress.words[k].b >= WELL_KNOWN_BOX; }).length;
+    $('stDue').textContent = due.length;
+    $('stStreak').textContent = streak();
+    var main = $('mainStudy');
+    if (due.length) main.textContent = 'Review ' + plural(due.length, 'due word');
+    else if (fresh.length) main.textContent = 'Learn ' + Math.min(NEW_BATCH, fresh.length) + ' new words';
+    else main.textContent = 'Review 15 words';
+    renderGroups();
+    renderSearch();
+  }
+  $('mainStudy').addEventListener('click', function () {
+    var due = dueKeys(), fresh = newKeys();
+    if (due.length) startCards(due, 'Due for review');
+    else if (fresh.length) startCards(fresh.slice(0, NEW_BATCH), 'New words');
+    else startCards(shuffle(ORDER).sort(function (a, b) { return rec(a).b - rec(b).b; }).slice(0, NEW_BATCH), 'Review');
+  });
+  $('mainQuiz').addEventListener('click', function () {
+    var started = Object.keys(progress.words);
+    openQuizSetup('All groups', shuffle(started).concat(shuffle(newKeys())));
+  });
+
+  function renderGroups() {
+    var ul = $('groups'); ul.textContent = '';
+    GROUPS.forEach(function (keys, gi) {
+      var n = gi + 1, total = keys.length;
+      var started = keys.filter(function (k) { return !isNew(k); }).length;
+      var known = keys.filter(function (k) { var r = rec(k); return r && r.b >= WELL_KNOWN_BOX; }).length;
+      var due = keys.filter(isDue).length;
+      var meter = el('div', { class: 'meter', role: 'img', 'aria-label': known + ' of ' + total + ' well known, ' + started + ' started' }, [
+        el('span', { class: 'started', style: 'width:' + (started / total * 100) + '%' }),
+        el('span', { class: 'known', style: 'width:' + (known / total * 100) + '%' })
+      ]);
+      var meta = started ? started + ' of ' + total + ' started · ' + known + ' well known' + (due ? ' · ' + due + ' due' : '') : total + ' words · not started';
+      var label = 'group ' + n;
+      ul.appendChild(el('li', { class: 'gc' }, [
+        el('h3', { text: 'Group ' + n }),
+        el('p', { class: 'meta', text: meta }),
+        meter,
+        el('div', { class: 'row' }, [
+          el('button', { class: 'btn small primary', type: 'button', text: 'Flashcards', 'aria-label': 'Flashcards for ' + label, onclick: function () { startGroupCards(n); } }),
+          el('button', { class: 'btn small', type: 'button', text: 'Quiz', 'aria-label': 'Quiz on ' + label, onclick: function () { openQuizSetup('Group ' + n, shuffle(GROUPS[n - 1])); } }),
+          el('button', { class: 'btn small', type: 'button', text: 'Words', 'aria-label': 'Words in ' + label, onclick: function () { go('#words/' + n); } })
+        ])
+      ]));
+    });
+  }
+  function startGroupCards(n) {
+    var keys = uniq(GROUPS[n - 1]);
+    var queue = dueKeys(keys).concat(newKeys(keys));
+    startCards(queue.length ? queue : keys, 'Group ' + n + (queue.length ? '' : ' · review all'));
+  }
+
+  /* Search */
+  function matches(q) {
+    var out = [];
+    ORDER.forEach(function (k) {
+      var w = WORDS[k];
+      var inWord = k.indexOf(q) >= 0, inMeaning = w.m.join(' ').toLowerCase().indexOf(q) >= 0;
+      if (inWord || inMeaning) out.push({ k: k, score: k === q ? 0 : k.indexOf(q) === 0 ? 1 : inWord ? 2 : 3 });
+    });
+    return out.sort(function (a, b) { return a.score - b.score; }).map(function (x) { return x.k; });
+  }
+  function wordRow(k, extra) {
+    var w = WORDS[k], st = status(k);
+    return el('li', null, [
+      el('div', null, [el('span', { class: 'w', lang: 'en', text: w.w }), el('span', { class: 'g', text: 'Group ' + w.groups.join(', ') })]),
+      el('div', { class: 'side' }, [el('span', { class: 'status ' + st.cls, text: st.text })].concat(extra || [])),
+      el('p', { class: 'm', text: w.m.length > 1 ? w.m.map(function (s, i) { return (i + 1) + '. ' + s; }).join('  ') : w.m[0] })
+    ]);
+  }
+  function renderSearch() {
+    var q = $('q').value.trim().toLowerCase();
+    var box = $('results'), list = $('resultList');
+    if (q.length < 2) { box.hidden = true; $('groups').hidden = false; $('resultCount').textContent = ''; return; }
+    var found = matches(q), shown = found.slice(0, 40);
+    box.hidden = false;
+    $('resultCount').textContent = found.length ? plural(found.length, 'match', 'matches') + (found.length > shown.length ? ', showing the first ' + shown.length : '') : 'No words or meanings match “' + q + '”.';
+    list.textContent = '';
+    list.hidden = !found.length;
+    shown.forEach(function (k) {
+      list.appendChild(wordRow(k, [el('button', { class: 'btn small', type: 'button', text: 'Study', 'aria-label': 'Study ' + WORDS[k].w, onclick: function () { startCards([k], WORDS[k].w); } })]));
+    });
+  }
+  $('q').addEventListener('input', renderSearch);
+
+  /* Export / import / reset */
+  $('exportBtn').addEventListener('click', function () {
+    var blob = new Blob([JSON.stringify({ app: 'sk-gre', version: 1, exported: new Date().toISOString(), progress: progress, notes: notes }, null, 1)], { type: 'application/json' });
+    var a = el('a', { href: URL.createObjectURL(blob), download: 'gre-vocab-progress-' + today() + '.json' });
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    announce('Progress exported.');
+  });
+  $('importBtn').addEventListener('click', function () { $('importFile').click(); });
+  $('importFile').addEventListener('change', function () {
+    var f = this.files[0]; this.value = '';
+    if (!f) return;
+    if (f.size > 5 * 1024 * 1024) { showNotice('That file is too large to be a progress export.'); return; }
+    f.text().then(function (txt) {
+      var data = JSON.parse(txt);
+      if (!data || data.app !== 'sk-gre' || !data.progress) throw new Error('not ours');
+      progress = cleanProgress(data.progress);
+      notes = Object.assign({}, notes, cleanNotes(data.notes));
+      saveProgress(); saveNotes(); renderHome();
+      showNotice('Imported progress for ' + plural(Object.keys(progress.words).length, 'word') + '.');
+    }).catch(function () { showNotice('That file is not a GRE vocabulary export, so nothing was changed.'); });
+  });
+  $('resetBtn').addEventListener('click', function () { $('resetDlg').returnValue = ''; $('resetDlg').showModal(); });
+  $('resetDlg').addEventListener('close', function () {
+    if (this.returnValue !== 'reset') return;
+    progress = { v: 1, words: {}, days: [] }; saveProgress(); renderHome();
+    announce('Progress reset.'); $('resetBtn').focus();
+  });
+
+  /* ---------- Flashcards ---------- */
+  function startCards(keys, title) {
+    if (!keys.length) return;
+    session = { title: title, queue: uniq(keys), i: 0, flipped: false, done: false, tally: { again: 0, good: 0, easy: 0 }, reviewed: {} };
+    go('#cards');
+  }
+  function renderCard(focusIt) {
+    var s = session, area = $('cardArea'); area.textContent = '';
+    $('cardsTitle').textContent = 'Flashcards: ' + s.title;
+    if (s.done) { renderCardsDone(); return; }
+    var key = s.queue[s.i], w = WORDS[key];
+    $('cardPos').textContent = s.title + ' · card ' + (s.i + 1) + ' of ' + s.queue.length;
+    $('cardTrack').style.width = (s.i / s.queue.length * 100) + '%';
+
+    var card = el('div', { class: 'fc' + (s.flipped ? ' back' : ''), tabindex: '0' });
+    card.appendChild(el('span', { class: 'sq', 'aria-hidden': 'true' }));
+    card.appendChild(el('span', { class: 'side-label', 'aria-hidden': 'true', text: s.flipped ? 'Meaning' : 'Word' }));
+    card.appendChild(el('p', { class: 'word', lang: 'en', text: w.w }));
+    if (!s.flipped) {
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', w.w + '. Show the meaning');
+      card.appendChild(el('p', { class: 'hint', text: isNew(key) ? 'New word. Think of the meaning, then flip.' : 'Think of the meaning, then flip.' }));
+      card.addEventListener('click', flip);
+      area.appendChild(card);
+      area.appendChild(el('div', { class: 'flip-row' }, [el('button', { class: 'btn primary', type: 'button', id: 'flipBtn', onclick: flip }, ['Show meaning ', el('span', { class: 'kbd', 'aria-hidden': 'true', text: 'Space' })])]));
+    } else {
+      card.setAttribute('role', 'group');
+      card.setAttribute('aria-label', 'Meaning of ' + w.w);
+      var ol = el(w.m.length > 1 ? 'ol' : 'ul', { class: 'senses' + (w.m.length > 1 ? '' : ' one') });
+      w.m.forEach(function (sense) { ol.appendChild(el('li', { text: sense })); });
+      card.appendChild(ol);
+      card.appendChild(rememberPanel(key, function () { renderCard(false); }));
+      area.appendChild(card);
+      var rate = el('div', { class: 'rate', role: 'group', 'aria-label': 'How well did you know it?' });
+      [['again', 'Again', '1'], ['good', 'Got it', '2'], ['easy', 'Easy', '3']].forEach(function (r) {
+        var nb = nextBox(key, r[0]);
+        rate.appendChild(el('button', { class: 'btn ' + r[0], type: 'button', 'aria-keyshortcuts': r[2], 'aria-label': r[1] + ', next review ' + intervalText(nb),
+          onclick: function () { rateCard(r[0]); } }, [
+          el('span', null, [el('span', { class: 'kbd', 'aria-hidden': 'true', text: r[2] }), ' ' + r[1]]),
+          el('small', { 'aria-hidden': 'true', text: r[0] === 'again' ? 'see it again soon' : intervalText(nb) })
+        ]));
+      });
+      area.appendChild(rate);
+    }
+    area.appendChild(el('p', { class: 'keys', 'aria-hidden': 'true', text: s.flipped ? 'Keys: 1 Again · 2 Got it · 3 Easy' : 'Keys: Space to flip' }));
+    if (focusIt) card.focus({ preventScroll: true });
+  }
+  function flip() {
+    if (!session || session.flipped || session.done) return;
+    session.flipped = true; renderCard(true);
+    var c = $('cardArea').querySelector('.fc'); c.classList.add('anim');
+    announce('Meaning: ' + WORDS[session.queue[session.i]].m.join('. '));
+  }
+  function rateCard(rating) {
+    var s = session; if (!s || !s.flipped) return;
+    var key = s.queue[s.i];
+    grade(key, rating);
+    s.tally[rating]++; s.reviewed[key] = true;
+    if (rating === 'again') s.queue.splice(Math.min(s.queue.length, s.i + 1 + AGAIN_GAP), 0, key);
+    s.i++; s.flipped = false;
+    if (s.i >= s.queue.length) s.done = true;
+    renderCard(true);
+  }
+  function renderCardsDone() {
+    var s = session, n = Object.keys(s.reviewed).length;
+    $('cardPos').textContent = s.title + ' · finished';
+    $('cardTrack').style.width = '100%';
+    var due = dueKeys().length;
+    var box = el('div', { class: 'done', tabindex: '-1' }, [
+      el('h2', { text: 'Session complete' }),
+      el('p', { text: 'You reviewed ' + plural(n, 'word') + ': ' + s.tally.again + ' Again, ' + s.tally.good + ' Got it, ' + s.tally.easy + ' Easy. ' + (due ? plural(due, 'word is', 'words are') + ' still due today.' : 'Nothing else is due today.') }),
+      el('div', { class: 'actions' }, [
+        el('button', { class: 'btn primary', type: 'button', text: 'Back to all groups', onclick: function () { go('#'); } }),
+        el('button', { class: 'btn', type: 'button', text: 'Quiz these words', onclick: function () { openQuizSetup(s.title, shuffle(Object.keys(s.reviewed))); } })
+      ])
+    ]);
+    $('cardArea').appendChild(box); box.focus({ preventScroll: true });
+    announce('Session complete.');
+  }
+
+  /* ---------- Quiz ---------- */
+  var pendingQuiz = null;
+  function openQuizSetup(scope, pool) {
+    pendingQuiz = { scope: scope, pool: uniq(pool) };
+    $('quizScope').textContent = scope + ' · ' + plural(pendingQuiz.pool.length, 'word') + ' to draw from';
+    $('quizSetup').returnValue = '';
+    $('quizSetup').showModal();
+  }
+  $('quizSetup').addEventListener('close', function () {
+    if (this.returnValue !== 'start' || !pendingQuiz) return;
+    var f = $('quizForm');
+    var mode = f.querySelector('input[name="mode"]:checked').value, count = +f.querySelector('input[name="count"]:checked').value;
+    startQuiz(pendingQuiz.scope, pendingQuiz.pool, mode, count);
+  });
+  function stem(t) { return t.replace(/(ingly|edly|ing|ed|ly|ies|es|s)$/, '').replace(/e$/, ''); }
+  function tokens(key) {
+    if (WORDS[key]._t) return WORDS[key]._t;
+    var set = {};
+    WORDS[key].m.join(' ').toLowerCase().split(/[^a-z]+/).forEach(function (t) {
+      if (t.length > 3 && !STOPSET[t]) { var s = stem(t); set[s.length > 2 ? s : t] = true; }
+    });
+    WORDS[key]._t = set; return set;
+  }
+  function overlaps(a, b) { var ta = tokens(a), tb = tokens(b); return Object.keys(ta).some(function (t) { return tb[t]; }); }
+  function meaningText(key) { var m = WORDS[key].m; return m.length > 1 ? m.map(function (s, i) { return (i + 1) + '. ' + s; }).join('  ') : m[0]; }
+  function distractors(key) {
+    var picked = [], seenText = {};
+    seenText[meaningText(key)] = true;
+    var pool = shuffle(ORDER);
+    for (var i = 0; i < pool.length && picked.length < 3; i++) {
+      var k = pool[i];
+      if (k === key || seenText[meaningText(k)] || overlaps(key, k)) continue;
+      if (picked.some(function (p) { return overlaps(p, k); })) continue;
+      seenText[meaningText(k)] = true; picked.push(k);
+    }
+    return picked;
+  }
+  function startQuiz(scope, pool, mode, count) {
+    var keys = pool.slice(0, Math.min(count, pool.length));
+    var qs = keys.map(function (k) {
+      var type = mode === 'mixed' ? (Math.random() < .5 ? 'wm' : 'mw') : mode;
+      return { key: k, type: type, options: shuffle([k].concat(distractors(k))), picked: null };
+    });
+    quiz = { scope: scope, qs: qs, i: 0, correct: 0, missed: [], done: false };
+    go('#quiz');
+  }
+  function renderQuiz(focusIt) {
+    var z = quiz, area = $('quizArea'); area.textContent = '';
+    if (z.done) { renderQuizDone(); return; }
+    var q = z.qs[z.i], w = WORDS[q.key], answered = q.picked !== null;
+    $('quizPos').textContent = z.scope + ' · question ' + (z.i + 1) + ' of ' + z.qs.length;
+    $('quizTrack').style.width = ((z.i + (answered ? 1 : 0)) / z.qs.length * 100) + '%';
+    var box = el('div', { class: 'q' });
+    box.appendChild(el('p', { class: 'ask', id: 'qAsk', text: q.type === 'wm' ? 'Choose the meaning' : 'Choose the word' }));
+    box.appendChild(el('p', { class: 'prompt' + (q.type === 'mw' ? ' def' : ''), id: 'qPrompt', lang: 'en', tabindex: '-1', text: q.type === 'wm' ? w.w : meaningText(q.key) }));
+    var ul = el('ul', { class: 'opts', role: 'list', 'aria-labelledby': 'qAsk qPrompt' });
+    q.options.forEach(function (k, i) {
+      var isRight = k === q.key, isPicked = k === q.picked;
+      var cls = 'opt' + (q.type === 'mw' ? ' word' : '');
+      var tag = null;
+      if (answered) {
+        if (isRight) { cls += ' right'; tag = el('span', { class: 'tag', text: isPicked ? 'Your answer · correct' : 'Correct answer' }); }
+        else if (isPicked) { cls += ' wrong'; tag = el('span', { class: 'tag', text: 'Your answer' }); }
+        else cls += ' dim';
+      }
+      var b = el('button', { class: cls, type: 'button', disabled: answered, 'aria-keyshortcuts': String(i + 1), onclick: function () { answer(k); } }, [
+        el('span', { class: 'n', 'aria-hidden': 'true', text: String(i + 1) }),
+        el('span', { lang: 'en', text: q.type === 'wm' ? meaningText(k) : WORDS[k].w }),
+        tag
+      ]);
+      ul.appendChild(el('li', null, [b]));
+    });
+    box.appendChild(ul);
+    if (answered) {
+      var ok = q.picked === q.key;
+      var fb = el('div', { class: 'fb' }, [
+        el('p', { class: 'verdict ' + (ok ? 'ok' : 'no') }, [svgIcon(ok ? ICON_OK : ICON_NO), ok ? 'Correct' : q.type === 'wm' ? 'Not quite. The correct meaning is marked above.' : 'Not quite. The answer is “' + w.w + '”.']),
+        el('p', { class: 'fw', lang: 'en', text: w.w })
+      ]);
+      var ol = el(w.m.length > 1 ? 'ol' : 'ul', { class: 'senses' + (w.m.length > 1 ? '' : ' one') });
+      w.m.forEach(function (s) { ol.appendChild(el('li', { text: s })); });
+      fb.appendChild(ol);
+      fb.appendChild(rememberPanel(q.key, function () { renderQuiz(false); }));
+      box.appendChild(fb);
+      var last = z.i === z.qs.length - 1;
+      box.appendChild(el('div', { class: 'next-row' }, [
+        el('span', { class: 'keys', 'aria-hidden': 'true', style: 'margin:0', text: 'Enter to continue' }),
+        el('button', { class: 'btn primary', type: 'button', id: 'nextBtn', onclick: nextQuestion, text: last ? 'See results' : 'Next question' })
+      ]));
+    } else {
+      box.appendChild(el('p', { class: 'keys', 'aria-hidden': 'true', text: 'Keys: 1 to 4 to answer' }));
+    }
+    area.appendChild(box);
+    if (focusIt) {
+      var target = answered ? $('nextBtn') : $('qPrompt');
+      target.focus({ preventScroll: true });
+    }
+  }
+  function answer(k) {
+    var z = quiz, q = z.qs[z.i];
+    if (!q || q.picked !== null) return;
+    q.picked = k;
+    var ok = k === q.key;
+    if (ok) z.correct++; else z.missed.push(q.key);
+    grade(q.key, ok ? 'good' : 'again');
+    announce(ok ? 'Correct.' : 'Not quite. The answer is ' + WORDS[q.key].w + ': ' + WORDS[q.key].m.join('. '));
+    renderQuiz(true);
+  }
+  function nextQuestion() {
+    var z = quiz; if (!z) return;
+    if (z.i >= z.qs.length - 1) z.done = true; else z.i++;
+    renderQuiz(true);
+  }
+  function renderQuizDone() {
+    var z = quiz, missed = uniq(z.missed);
+    $('quizPos').textContent = z.scope + ' · results';
+    $('quizTrack').style.width = '100%';
+    var box = el('div', { class: 'done', tabindex: '-1' }, [
+      el('h2', { text: 'Quiz results' }),
+      el('p', { class: 'score', text: z.correct + ' / ' + z.qs.length }),
+      el('p', { text: missed.length ? 'You missed ' + plural(missed.length, 'word') + '. They are now due for review.' : 'Every answer correct.' })
+    ]);
+    if (missed.length) {
+      var ul = el('ul', { class: 'list missed' });
+      missed.forEach(function (k) { ul.appendChild(wordRow(k)); });
+      box.appendChild(ul);
+    }
+    box.appendChild(el('div', { class: 'actions' }, [
+      missed.length ? el('button', { class: 'btn primary', type: 'button', text: 'Practise the missed words', onclick: function () { startCards(missed, 'Missed in quiz'); } }) : null,
+      el('button', { class: 'btn' + (missed.length ? '' : ' primary'), type: 'button', text: 'Another quiz', onclick: function () { openQuizSetup(z.scope, shuffle(z.qs.map(function (q) { return q.key; }))); } }),
+      el('button', { class: 'btn', type: 'button', text: 'Back to all groups', onclick: function () { go('#'); } })
+    ]));
+    $('quizArea').appendChild(box); box.focus({ preventScroll: true });
+    announce('Quiz finished. ' + z.correct + ' of ' + z.qs.length + ' correct.');
+  }
+
+  /* ---------- Group word list ---------- */
+  function renderWords() {
+    var n = wordsGroup, keys = GROUPS[n - 1];
+    $('wordsTitle').textContent = 'Group ' + n + ' words';
+    var act = $('wordsActions'); act.textContent = '';
+    act.appendChild(el('button', { class: 'btn small primary', type: 'button', text: 'Flashcards', onclick: function () { startGroupCards(n); } }));
+    act.appendChild(el('button', { class: 'btn small', type: 'button', text: 'Quiz', onclick: function () { openQuizSetup('Group ' + n, shuffle(keys)); } }));
+    var ul = $('wordsList'); ul.textContent = '';
+    keys.forEach(function (k) { ul.appendChild(wordRow(k)); });
+    $('wordsTitle').setAttribute('tabindex', '-1'); $('wordsTitle').focus({ preventScroll: true });
+  }
+
+  /* ---------- Keyboard ---------- */
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    var t = e.target, tag = t && t.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (t && t.isContentEditable)) return;
+    if (document.querySelector('dialog[open]')) return;
+    if (!$('v-cards').hidden && session && !session.done) {
+      if ((e.key === ' ' || e.key === 'Enter') && !session.flipped && tag !== 'BUTTON' && tag !== 'A') { e.preventDefault(); flip(); return; }
+      if (session.flipped && (e.key === '1' || e.key === '2' || e.key === '3')) { e.preventDefault(); rateCard(['again', 'good', 'easy'][+e.key - 1]); }
+      return;
+    }
+    if (!$('v-quiz').hidden && quiz && !quiz.done) {
+      var q = quiz.qs[quiz.i];
+      if (q.picked === null && /^[1-4]$/.test(e.key) && q.options[+e.key - 1]) { e.preventDefault(); answer(q.options[+e.key - 1]); return; }
+      if (q.picked !== null && e.key === 'Enter' && tag !== 'BUTTON' && tag !== 'A') { e.preventDefault(); nextQuestion(); }
+    }
+  });
+
+  /* ---------- Theme (shares the site's "theme" key) ---------- */
+  var root = document.documentElement;
+  var MOON = '<path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/>';
+  var SUN = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+  function paintTheme() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    $('themeIcon').innerHTML = dark ? SUN : MOON;
+    $('themeBtn').setAttribute('aria-pressed', dark ? 'true' : 'false');
+  }
+  $('themeBtn').addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    paintTheme();
+  });
+  paintTheme();
+
+  route();
+})();
+</script>
+</body>
+</html>
