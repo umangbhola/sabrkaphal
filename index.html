@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Umang Bhola</title>
 <meta name="description" content="Umang Bhola builds the missing piece in public systems and gets governments to own it. Ten years, five Indian states.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="icon" href="assets/logo-wave.png" type="image/png">
 <style>
   :root {
     --paper: #EAEEF1; --panel: #F6F8FA; --tile: #DCE3E9; --tile-text: #8793A6;
     --ink: #1D2354; --ink-2: #4A5275; --line: #C3CCD6;
     --accent: #E3A008; --on-accent: #1D2354; --focus: #2B3BC7;
+    --exp-accent: #2E7D4F;
     --h-bg: #12152B; --h-land: #1A1F45; --h-ink: #EEF0FB; --h-mute: #AAB2DA;
     --h-dot: rgba(160,172,255,.40); --h-accent: #F0B429; --h-card: #1B2050; --h-line: rgba(170,178,218,.28);
-    --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
-    --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font: Calibri, "Segoe UI", Candara, sans-serif;
     color-scheme: light;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
@@ -38,42 +38,103 @@
 
   html { scroll-padding-top: env(safe-area-inset-top, 0px); }
   *, *::before, *::after { box-sizing: inherit; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.125rem/1.6 var(--serif); -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.125rem/1.55 var(--font); -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
   a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
   .hero a:focus-visible, .hero button:focus-visible { outline-color: #fff; }
 
-  .btn { display: inline-block; padding: .62rem 1.15rem; border-radius: 999px; border: 1px solid currentColor; font: 500 .95rem/1.2 var(--sans); text-decoration: none; cursor: pointer; background: none; color: var(--ink); }
+  .btn { display: inline-block; padding: .62rem 1.15rem; border-radius: 999px; border: 1px solid currentColor; font: 500 .95rem/1.2 var(--font); text-decoration: none; cursor: pointer; background: none; color: var(--ink); }
   .btn:hover { background: color-mix(in srgb, currentColor 10%, transparent); }
   .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
   .btn.primary:hover { filter: brightness(1.06); background: var(--accent); }
 
   /* ---------- Hero: the night map ---------- */
   .hero { background: var(--h-bg); color: var(--h-ink); margin-top: calc(-1 * env(safe-area-inset-top, 0px)); padding-top: env(safe-area-inset-top, 0px); overflow: hidden; }
-  .hero-inner { max-width: 1240px; margin: 0 auto; padding: 1.25rem 1.5rem 3rem; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
-  .top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 2rem; font-family: var(--sans); }
-  .top .name { font-weight: 600; font-size: 1rem; text-decoration: none; }
+  .hero-inner { max-width: 1180px; margin: 0 auto; padding: 1.25rem 1.5rem 3rem; display: flex; flex-direction: column; }
+  .top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 2rem; font-family: var(--font); }
+  .top .name { font-weight: 600; font-size: 1rem; text-decoration: none; color: var(--h-ink); }
+
+  .stage { flex: 1; display: flex; flex-direction: column; gap: 2rem; padding-top: 1.25rem; }
+  .intro-row { display: grid; grid-template-columns: minmax(260px, 300px) minmax(0, 1fr); gap: 1.25rem; align-items: stretch; }
+  .surface-card {
+    background: #fff;
+    color: var(--ink);
+    border-radius: 24px;
+    padding: 1.15rem 1.15rem 1.35rem;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, .28);
+    height: 100%;
+  }
+  .bio-card p {
+    margin: 0;
+    font: 400 1.02rem/1.55 var(--font);
+    color: #3a4258;
+  }
+  .profile-card .profile-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 18px;
+    margin: 0 0 1rem;
+    background: #f0f2f5;
+  }
+  .profile-card .profile-meta {
+    font: 400 .92rem/1.45 var(--font);
+    margin: 0 0 .35rem;
+    color: #5c6478;
+  }
+  .profile-card .profile-meta a { color: #2B3BC7; text-decoration: none; }
+  .profile-card .profile-meta a:hover { text-decoration: underline; }
+  .social-row { display: flex; align-items: center; gap: .65rem; margin: .5rem 0 .15rem; }
+  .social-row a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #eef1f6;
+    color: #1D2354;
+    text-decoration: none;
+  }
+  .social-row a:hover { background: #dfe5ef; }
+  .social-row a svg { width: 20px; height: 20px; fill: currentColor; }
+  .profile-card .profile-label {
+    font: 600 .72rem/1.2 var(--font);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #8793A6;
+    margin: 1.1rem 0 .55rem;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .skill-tag {
+    font: 500 .78rem/1.2 var(--font);
+    padding: .38rem .72rem;
+    border-radius: 999px;
+    color: #1D2354;
+  }
+  .skill-tag:nth-child(6n+1) { background: #d8f0dc; }
+  .skill-tag:nth-child(6n+2) { background: #d6e8ff; }
+  .skill-tag:nth-child(6n+3) { background: #ffe8cc; }
+  .skill-tag:nth-child(6n+4) { background: #e8dcf5; }
+  .skill-tag:nth-child(6n+5) { background: #ffdce8; }
+  .skill-tag:nth-child(6n+6) { background: #fff3bf; }
   .top nav { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.5rem; font-size: .9rem; }
   .top nav a { color: var(--h-mute); text-decoration: none; }
   .top nav a:hover { color: var(--h-ink); text-decoration: underline; }
-  .theme { font: 500 .82rem var(--sans); color: var(--h-mute); background: none; border: 1px solid var(--h-line); border-radius: 999px; padding: .28rem .8rem; cursor: pointer; }
+  .theme { font: 500 .82rem var(--font); color: var(--h-mute); background: none; border: 1px solid var(--h-line); border-radius: 999px; padding: .28rem .8rem; cursor: pointer; }
   .theme:hover { color: var(--h-ink); border-color: var(--h-mute); }
 
-  .stage { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 560px); grid-template-areas: "text map" "card map"; column-gap: 3rem; row-gap: 1.5rem; align-content: center; align-items: center; padding-top: 1.5rem; }
-  .text { grid-area: text; align-self: end; }
-  .mapwrap { grid-area: map; position: relative; }
-  .card { grid-area: card; align-self: start; }
+  .tagline-block h1 { font: 600 clamp(1.65rem, 3.2vw, 2.35rem)/1.2 var(--font); letter-spacing: -0.01em; margin: 0; max-width: 42rem; color: var(--h-ink); }
+  .map-section { width: 100%; max-width: 620px; margin: 0 auto; }
+  .mapwrap { position: relative; }
 
-  h1 { font: 500 clamp(2rem, 3.9vw, 3.2rem)/1.08 var(--serif); letter-spacing: -0.015em; margin: 0 0 1.1rem; max-width: 18ch; }
+  h1 { font: 600 clamp(1.65rem, 3.2vw, 2.35rem)/1.2 var(--font); letter-spacing: -0.01em; margin: 0; }
   .w { display: inline-block; opacity: 0; transform: translateY(.35em); animation: wIn .8s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: calc(var(--i) * 75ms + .25s); }
   @keyframes wIn { to { opacity: 1; transform: none; } }
   .fade { opacity: 0; animation: fIn .9s ease forwards; animation-delay: var(--d, 1.4s); }
   @keyframes fIn { to { opacity: 1; } }
-  .text p { max-width: 34rem; margin: 0 0 1.25rem; color: var(--h-mute); font-size: 1.05rem; line-height: 1.55; }
-  .actions { display: flex; flex-wrap: wrap; gap: .6rem .8rem; }
-  .hero .btn { color: var(--h-ink); }
-  .hero .btn.primary { background: var(--h-accent); border-color: var(--h-accent); color: #12152B; }
-
   svg.map { display: block; width: 100%; height: auto; overflow: visible; }
   .map .land { fill: var(--h-land); }
   .map .edge { fill: none; stroke: rgba(170,178,255,.28); stroke-width: .8; }
@@ -95,21 +156,19 @@
   .pin:focus-visible .ring { opacity: 1; stroke: #fff; stroke-width: 2.6; }
   .pin text { opacity: 0; transition: opacity .5s ease; }
   .pin.on text { opacity: 1; }
-  .pn { font: 600 15px var(--serif); fill: var(--h-ink); paint-order: stroke; stroke: var(--h-bg); stroke-width: 4px; stroke-linejoin: round; }
-  .py { font: 500 11px var(--sans); fill: var(--h-mute); paint-order: stroke; stroke: var(--h-bg); stroke-width: 3.5px; stroke-linejoin: round; }
-  .replay { margin-top: .6rem; font: 500 .85rem var(--sans); color: var(--h-mute); background: none; border: 1px solid var(--h-line); border-radius: 999px; padding: .35rem .9rem; cursor: pointer; }
+  .pn { font: 600 15px Calibri, sans-serif; fill: var(--h-ink); paint-order: stroke; stroke: var(--h-bg); stroke-width: 4px; stroke-linejoin: round; }
+  .py { font: 500 11px Calibri, sans-serif; fill: var(--h-mute); paint-order: stroke; stroke: var(--h-bg); stroke-width: 3.5px; stroke-linejoin: round; }
+  .replay { margin-top: .6rem; font: 500 .85rem var(--font); color: var(--h-mute); background: none; border: 1px solid var(--h-line); border-radius: 999px; padding: .35rem .9rem; cursor: pointer; }
   .replay:hover { color: var(--h-ink); border-color: var(--h-mute); }
 
-  /* Stop card */
-  .card-in { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 1rem; background: var(--h-card); border: 1px solid var(--h-line); border-radius: 12px; padding: .9rem; min-height: 10.5rem; transition: opacity .25s ease; }
-  .card-in.swap { opacity: 0; }
-  .card-in .ph { aspect-ratio: 1; align-self: start; }
-  .card-in h2 { font: 500 1.35rem/1.2 var(--serif); margin: .1rem 0 0; }
-  .card-in .yr { font: 400 .82rem/1.4 var(--sans); color: var(--h-mute); margin: .15rem 0 .5rem; }
-  .card-in .bl { font: 400 .95rem/1.45 var(--serif); margin: 0 0 .65rem; color: var(--h-ink); }
   .chips { display: flex; flex-wrap: wrap; gap: .4rem; }
-  .chip { font: 500 .8rem/1.2 var(--sans); color: var(--h-ink); background: transparent; border: 1px solid var(--h-mute); border-radius: 999px; padding: .32rem .75rem; cursor: pointer; }
-  .chip:hover { background: rgba(255,255,255,.1); }
+  .chip { font: 500 .8rem/1.2 var(--font); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: .32rem .75rem; cursor: pointer; }
+  .chip:hover { border-color: var(--accent); }
+  .stop-d-body h2 { font: 600 1.45rem/1.25 var(--font); margin: 0; }
+  .stop-d-body .yr { font: 400 .88rem/1.45 var(--font); color: var(--ink-2); margin: .35rem 0 .85rem; }
+  .stop-d-body .bl { font: 400 1.02rem/1.55 var(--font); margin: 0 0 1rem; }
+  .stop-d-layout { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 1rem; padding: 1.25rem 1.5rem 1.5rem; }
+  .stop-d-layout .ph { aspect-ratio: 1; border-radius: 10px; }
 
   /* Placeholder images */
   .ph { position: relative; overflow: hidden; border-radius: 8px; background: var(--tile); }
@@ -117,26 +176,73 @@
 
   /* ---------- Sections ---------- */
   .section { max-width: 1180px; margin: 0 auto; padding: 5rem 1.5rem 0; }
-  .section h2 { font: 500 clamp(1.7rem, 3.2vw, 2.3rem)/1.15 var(--serif); letter-spacing: -0.01em; margin: 0 0 .5rem; }
+  .section h2 { font: 600 clamp(1.7rem, 3.2vw, 2.3rem)/1.15 var(--font); letter-spacing: -0.01em; margin: 0 0 .5rem; }
   .section .lede { color: var(--ink-2); margin: 0 0 2rem; max-width: 38rem; }
 
   .works { align-items: start; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.25rem 1.75rem; }
   .work { display: block; width: 100%; text-align: left; background: none; border: 0; padding: 0; color: inherit; font: inherit; cursor: pointer; }
   .work .ph { aspect-ratio: 4 / 3; border-radius: 10px; }
-  .work .tag { font: 500 .8rem/1.4 var(--sans); color: var(--ink-2); margin: .85rem 0 .15rem; }
-  .work h3 { font: 500 1.3rem/1.25 var(--serif); margin: 0 0 .25rem; }
+  .work .tag { font: 500 .8rem/1.4 var(--font); color: var(--ink-2); margin: .85rem 0 .15rem; }
+  .work h3 { font: 600 1.3rem/1.25 var(--font); margin: 0 0 .25rem; }
   .work p { margin: 0; font-size: 1rem; line-height: 1.5; color: var(--ink-2); }
   .work:hover h3 { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 3px; text-underline-offset: 4px; }
 
-  .timeline { position: relative; margin-left: 6px; padding-left: 1.75rem; border-left: 2px solid var(--line); max-width: 760px; }
-  .role { position: relative; margin: 0 0 2.25rem; }
-  .role:last-child { margin-bottom: 0; }
-  .role::before { content: ""; position: absolute; left: calc(-1.75rem - 7px); top: .5rem; width: 12px; height: 12px; border-radius: 2px; background: var(--tile-text); }
-  .role.current::before { background: var(--accent); }
-  .role h3 { font: 500 1.3rem/1.3 var(--serif); margin: 0; }
-  .when { font: 400 .85rem/1.5 var(--sans); color: var(--ink-2); margin: .1rem 0 .6rem; }
-  .role p { margin: 0 0 .7rem; max-width: 40rem; }
-  .role p:last-child { margin-bottom: 0; }
+  .exp-panel {
+    display: grid;
+    grid-template-columns: minmax(140px, 200px) minmax(0, 1fr);
+    gap: 0;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(29, 35, 84, .06);
+    max-width: 900px;
+  }
+  .exp-nav { display: flex; flex-direction: column; padding: .75rem 0; border-right: 1px solid var(--line); background: #fff; }
+  .exp-tab {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: .85rem 1rem .85rem 1.15rem;
+    border: 0;
+    background: none;
+    font: 500 .95rem/1.35 var(--font);
+    color: var(--ink-2);
+    cursor: pointer;
+  }
+  .exp-tab:hover { color: var(--ink); background: rgba(46, 125, 79, .06); }
+  .exp-tab.on { color: var(--exp-accent); font-weight: 600; background: rgba(46, 125, 79, .08); }
+  .exp-tab.on::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .55rem;
+    bottom: .55rem;
+    width: 4px;
+    border-radius: 0 4px 4px 0;
+    background: var(--exp-accent);
+  }
+  .exp-detail { padding: 1.35rem 1.5rem 1.5rem; min-height: 220px; }
+  .exp-detail h3 { font: 600 1.35rem/1.3 var(--font); margin: 0; }
+  .exp-detail h3 .org { color: var(--exp-accent); }
+  .exp-detail .when { font: 400 .88rem/1.5 var(--font); color: var(--ink-2); margin: .35rem 0 1rem; }
+  .exp-detail ul { margin: 0; padding: 0; list-style: none; }
+  .exp-detail li {
+    position: relative;
+    padding: 0 0 .75rem 1.1rem;
+    font: 400 1.02rem/1.55 var(--font);
+    color: var(--ink);
+  }
+  .exp-detail li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--exp-accent);
+    font-size: .85rem;
+    top: .15rem;
+  }
+  .exp-footnote { max-width: 900px; margin: 1.25rem 0 0; font: 400 .98rem/1.55 var(--font); color: var(--ink-2); }
 
   .bento { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 250px 250px; gap: 14px; }
   .bt { position: relative; border-radius: 12px; overflow: hidden; background: var(--tile); }
@@ -144,15 +250,15 @@
   .bt.food { grid-row: 1 / 3; }
   .bt.books { grid-column: 2 / 4; }
   .bt .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.5rem 1.1rem 1rem; background: linear-gradient(to top, rgba(10,12,30,.88), rgba(10,12,30,0)); color: #fff; }
-  .bt .cap h3 { font: 500 1.3rem/1.2 var(--serif); margin: 0 0 .2rem; }
-  .bt .cap p { font: 400 .9rem/1.45 var(--sans); margin: 0; color: rgba(255,255,255,.88); max-width: 30rem; }
+  .bt .cap h3 { font: 600 1.3rem/1.2 var(--font); margin: 0 0 .2rem; }
+  .bt .cap p { font: 400 .9rem/1.45 var(--font); margin: 0; color: rgba(255,255,255,.88); max-width: 30rem; }
   .bt .cap .btn { margin-top: .75rem; color: #fff; border-color: rgba(255,255,255,.7); font-size: .85rem; padding: .45rem .95rem; }
   .bt .cap .btn:hover { background: rgba(255,255,255,.16); }
 
   .contact p { max-width: 36rem; margin: 0 0 1.25rem; }
   .contact .actions .btn { color: var(--ink); }
   .contact .actions .btn.primary { color: var(--on-accent); }
-  footer { max-width: 1180px; margin: 0 auto; padding: 4rem 1.5rem 3rem; font: 400 .85rem/1.5 var(--sans); color: var(--ink-2); }
+  footer { max-width: 1180px; margin: 0 auto; padding: 4rem 1.5rem 3rem; font: 400 .85rem/1.5 var(--font); color: var(--ink-2); }
 
   /* Case dialog */
   dialog { width: min(680px, 92vw); max-height: 88vh; border: 1px solid var(--line); border-radius: 12px; padding: 0; background: var(--panel); color: var(--ink); overflow: auto; }
@@ -160,32 +266,34 @@
   .d-img { aspect-ratio: 16 / 7; }
   .d-img .ph { height: 100%; border-radius: 0; }
   .d-body { padding: 1.5rem 1.6rem 1.75rem; }
-  .d-body h2 { font: 500 1.7rem/1.2 var(--serif); margin: 0; }
-  .d-body .meta { font: 400 .875rem/1.5 var(--sans); color: var(--ink-2); margin: .3rem 0 1.25rem; }
+  .d-body h2 { font: 600 1.7rem/1.2 var(--font); margin: 0; }
+  .d-body .meta { font: 400 .875rem/1.5 var(--font); color: var(--ink-2); margin: .3rem 0 1.25rem; }
   .beat { display: grid; grid-template-columns: 14px 1fr; column-gap: .8rem; margin: 0 0 1.1rem; }
-  .beat h3 { font: 600 .9rem/1.4 var(--sans); margin: 0 0 .15rem; }
-  .beat p { font: 400 1.05rem/1.55 var(--serif); margin: 0; }
+  .beat h3 { font: 600 .9rem/1.4 var(--font); margin: 0 0 .15rem; }
+  .beat p { font: 400 1.05rem/1.55 var(--font); margin: 0; }
   .mk { width: 14px; height: 14px; border-radius: 3px; margin-top: .2rem; }
   .mk.gap { border: 2px dashed var(--ink-2); }
   .mk.built { background: var(--accent); }
   .mk.changed { background: var(--ink); }
-  .close { position: absolute; top: .75rem; right: .75rem; z-index: 2; font: 500 .85rem var(--sans); color: #fff; background: rgba(10,12,30,.65); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: .35rem .9rem; cursor: pointer; }
+  .close { position: absolute; top: .75rem; right: .75rem; z-index: 2; font: 500 .85rem var(--font); color: #fff; background: rgba(10,12,30,.65); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: .35rem .9rem; cursor: pointer; }
   .close:hover { background: rgba(10,12,30,.85); }
   .dwrap { position: relative; }
 
   @media (max-width: 960px) {
-    .hero-inner { min-height: 0; padding-bottom: 2.5rem; }
-    .stage { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "map" "card"; row-gap: 2rem; padding-top: 2rem; }
-    .text { align-self: start; }
-    h1 { max-width: 20ch; }
-    .mapwrap { max-width: 520px; width: 100%; margin: 0 auto; }
+    .hero-inner { padding-bottom: 2.5rem; }
+    .intro-row { grid-template-columns: minmax(0, 1fr); }
     .works { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .exp-panel { grid-template-columns: minmax(0, 1fr); }
+    .exp-nav { flex-direction: row; flex-wrap: wrap; border-right: 0; border-bottom: 1px solid var(--line); padding: .5rem; gap: .25rem; }
+    .exp-tab { width: auto; padding: .55rem .85rem; border-radius: 999px; }
+    .exp-tab.on::before { display: none; }
+    .exp-tab.on { background: rgba(46, 125, 79, .14); }
   }
   @media (max-width: 640px) {
     body { font-size: 1.05rem; }
     .works { grid-template-columns: minmax(0, 1fr); }
-    .card-in { grid-template-columns: minmax(0, 1fr); }
-    .card-in .ph { aspect-ratio: 16 / 8; }
+    .stop-d-layout { grid-template-columns: minmax(0, 1fr); }
+    .stop-d-layout .ph { aspect-ratio: 16 / 9; max-height: 200px; }
     .bento { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-auto-rows: 230px; }
     .bt.food { grid-row: auto; grid-auto-rows: 300px; min-height: 300px; }
     .bt.books { grid-column: auto; }
@@ -196,7 +304,6 @@
     .w, .fade { animation: none; opacity: 1; transform: none; }
     .pin.on .sq, .pin.on .pulse { animation: none; }
     .pin text { transition: none; }
-    .card-in { transition: none; }
   }
 </style>
 </head>
@@ -216,17 +323,42 @@
     </header>
 
     <div class="stage">
-      <div class="text">
-        <h1 id="headline">I find the missing piece in a public system, build it, and get the government to own it.</h1>
-        <p class="fade" style="--d:1.5s">Ten years in public systems, across five Indian states: Rs 1,900+ Cr of public investment managed and 6 crore+ citizens reached. I started as a software engineer and moved into governance to point technology at problems that matter.</p>
-        <div class="actions fade" style="--d:1.8s">
-          <a class="btn primary" href="#work" data-go="work">See the work</a>
-          <a class="btn" href="mailto:umangbhola.ub@gmail.com">Email</a>
-          <a class="btn" href="https://in.linkedin.com/in/umang-bhola-194b6686" rel="noopener">LinkedIn</a>
-          <a class="btn" data-ig href="https://www.instagram.com/" rel="noopener">Instagram</a>
+      <div class="intro-row">
+        <aside class="profile" aria-label="Profile">
+          <div class="profile-card surface-card">
+            <img class="profile-photo" src="assets/profile-photo.png" width="288" height="288" alt="Umang Bhola">
+            <p class="profile-meta">Age 32</p>
+            <p class="profile-meta"><a href="mailto:umangbhola.ub@gmail.com">umangbhola.ub@gmail.com</a></p>
+            <div class="social-row">
+              <a href="https://in.linkedin.com/in/umang-bhola-194b6686" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h3v1.25a3.11 3.11 0 012.7-1.5c1.55 0 3.36.86 3.36 3.66z"/></svg>
+              </a>
+              <a data-ig href="https://www.instagram.com/" rel="noopener noreferrer" aria-label="Instagram profile">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+            </div>
+            <p class="profile-label">Skills</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Program management</span>
+              <span class="skill-tag">Public systems</span>
+              <span class="skill-tag">Policy &amp; delivery</span>
+              <span class="skill-tag">Education programs</span>
+              <span class="skill-tag">Software engineering</span>
+              <span class="skill-tag">Stakeholder engagement</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="bio-card surface-card">
+          <p>Public systems leader with 10 years building and scaling governance programs at the intersection of technology, policy and on-ground delivery. Started as a software engineer; pivoted deliberately to governance consulting to apply technology toward problems that matter — managing Rs 1,900+ Cr in public investment, reaching 6 Crore+ citizens across 5 Indian states. Brings technical depth, systems thinking and stakeholder influence — having worked directly with Chief Secretaries, global funders (Gates, CIFF, Open Philanthropy) and field communities on the same program.</p>
         </div>
       </div>
 
+      <div class="tagline-block">
+        <h1 id="headline">I find the missing piece in a public system, build it, and get the government to own it.</h1>
+      </div>
+
+      <div class="map-section">
       <div class="mapwrap">
         <svg class="map" id="svgmap" viewBox="-8 -8 576 636" role="group" aria-label="Map of India showing the places I have lived and worked, in the order I arrived. Each pin can be selected.">
           <defs>
@@ -247,8 +379,7 @@
         </svg>
         <button class="replay" id="replay" type="button">Replay the route</button>
       </div>
-
-      <div class="card"><div class="card-in" id="card" aria-live="polite"></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -262,30 +393,11 @@
 
   <section class="section" id="experience">
     <h2>Experience</h2>
-    <div class="timeline">
-      <div class="role current">
-        <h3>Program Manager, GDi Partners</h3>
-        <p class="when">June 2023 to now</p>
-        <p>Leading the Youth Empowerment Program in Jammu and Kashmir with the Chief Secretary’s office, and the service delivery transformation in Assam with the IT and Revenue Departments. Designed and launched Punjab’s first agricultural solar irrigation program and drove the stubble burning reduction program across 10+ departments.</p>
-        <p>Supported the CEO on 15+ business development opportunities with Gates, MSDF, Open Philanthropy and CIFF, converting 25% of them. Led recruitment that grew the team 1.5x and improved retention by 25% in 18 months.</p>
-      </div>
-      <div class="role">
-        <h3>Program Consultant, then Junior Manager, Samagra Governance</h3>
-        <p class="when">March 2020 to May 2023</p>
-        <p>Led a four-person team designing Himachal Pradesh’s statewide education program, funded by MSDF, for 8 lakh students across 15,000 schools. Designed e-Samwad and the WhatsApp home-learning chatbot, co-built the NIPUN Lakshya app with Google, and drove open-source field monitoring apps across three states.</p>
-      </div>
-      <div class="role">
-        <h3>Software Engineer, then Senior Software Engineer, CaaStle</h3>
-        <p class="when">July 2016 to January 2020</p>
-        <p>Part of the first engineering team. Co-built GwynnieBee Closet, CaaStle’s first Android app, which reached 2 lakh daily active users. Led the design of a no-code Clothing-as-a-Service platform that put 4 vendor apps in front of a combined 2 million users, and built a machine learning garment classifier that saved about $750K a year.</p>
-      </div>
-      <div class="role">
-        <h3>B.E. Information Technology, Punjab Engineering College</h3>
-        <p class="when">2012 to 2016, Chandigarh</p>
-        <p>GPA 9.34 out of 10, in the top 5% of a batch of 400, with a merit scholarship for two years.</p>
-      </div>
+    <div class="exp-panel">
+      <div class="exp-nav" id="expNav" role="tablist" aria-label="Work history"></div>
+      <div class="exp-detail" id="expDetail" role="tabpanel" aria-live="polite"></div>
     </div>
-    <p style="max-width:40rem;margin:2.25rem 0 0">Alongside this: CPL India Fellow in 2019, a competitive public leadership fellowship that set off my move from private technology into public service, and the Anubhav Lecture Series at the University of Chicago Harris School of Public Policy in 2020.</p>
+    <p class="exp-footnote">Alongside this: CPL India Fellow in 2019, a competitive public leadership fellowship that set off my move from private technology into public service, and the Anubhav Lecture Series at the University of Chicago Harris School of Public Policy in 2020.</p>
   </section>
 
   <section class="section" id="beyond">
@@ -306,6 +418,13 @@
 </main>
 
 <footer>© 2026 Umang Bhola. Draft.</footer>
+
+<dialog id="dlgStop" aria-labelledby="dlgStopTitle">
+  <div class="dwrap">
+    <button class="close" id="dlgStopClose" type="button">Close</button>
+    <div class="stop-d-layout" id="dlgStopBody"></div>
+  </div>
+</dialog>
 
 <dialog id="dlg" aria-labelledby="dlgTitle">
   <div class="dwrap">
@@ -354,8 +473,8 @@
       '<rect width="400" height="300" fill="url(#' + id + ')"/>' + shapes +
       '<rect x="100" y="118" width="200" height="64" rx="32" fill="' + P.pill + '"/>' +
       '<g fill="none" stroke="' + P.ink + '" stroke-width="1.8"><rect x="121" y="143" width="26" height="18" rx="3"/><circle cx="134" cy="152" r="4.4"/><path d="M128 143l2-4h8l2 4"/></g>' +
-      '<text x="158" y="146" font-family="Public Sans, system-ui, sans-serif" font-size="13" font-weight="600" fill="' + P.ink + '">Add photo</text>' +
-      '<text x="158" y="162" font-family="Public Sans, system-ui, sans-serif" font-size="10.5" fill="' + P.ink + '" opacity=".85">' + label + '</text></svg>';
+      '<text x="158" y="146" font-family="Calibri, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="' + P.ink + '">Add photo</text>' +
+      '<text x="158" y="162" font-family="Calibri, Segoe UI, sans-serif" font-size="10.5" fill="' + P.ink + '" opacity=".85">' + label + '</text></svg>';
   }
   function fillPh(node, seed, label, img) {
     node.textContent = '';
@@ -493,8 +612,8 @@
     var t1 = sv('tspan', { 'class': 'pn', x: s.lab.dx }); t1.textContent = s.label;
     var t2 = sv('tspan', { 'class': 'py', x: s.lab.dx, dy: '13' }); t2.textContent = s.year;
     t.appendChild(t1); t.appendChild(t2); g.appendChild(t);
-    g.addEventListener('click', function () { finish(); selectStop(s.id); });
-    g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); finish(); selectStop(s.id); } });
+    g.addEventListener('click', function () { finish(); openStopDialog(s.id); });
+    g.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); finish(); openStopDialog(s.id); } });
     pinsG.appendChild(g); pinEls[s.id] = g;
   });
 
@@ -526,54 +645,45 @@
     if (t >= END) { render(END); done(); return; }
     render(t); raf = requestAnimationFrame(tick);
   }
-  function done() { finished = true; raf = 0; if (!selected) selectStop('chd'); }
+  function done() { finished = true; raf = 0; }
   function finish() { if (!finished) { cancelAnimationFrame(raf); render(END); done(); } }
   function play() {
     cancelAnimationFrame(raf); finished = false; t0 = 0; selected = null;
     Object.keys(pinEls).forEach(function (k) { pinEls[k].classList.remove('on'); pinEls[k].classList.remove('sel'); });
-    showHint();
     if (reduce) { render(END); done(); return; }
     render(0); raf = requestAnimationFrame(tick);
   }
 
-  /* ---------- Stop card ---------- */
-  var card = document.getElementById('card');
+  /* ---------- Stop dialog ---------- */
+  var dlgStop = document.getElementById('dlgStop');
   var selected = null;
-  function showHint() {
-    card.textContent = '';
-    var ph = el('div', 'ph'); fillPh(ph, 0, 'Your photo here');
-    var ct = el('div');
-    ct.appendChild(el('h2', null, 'Follow the route'));
-    ct.appendChild(el('p', 'yr', 'Each pin fills in the order I arrived.'));
-    ct.appendChild(el('p', 'bl', 'Select any stop to see what I did there, and open the work that came out of it.'));
-    card.appendChild(ph); card.appendChild(ct);
-  }
-  function selectStop(id) {
+  function openStopDialog(id) {
     var s = STOPS.filter(function (x) { return x.id === id; })[0];
+    if (!s) return;
     if (selected && pinEls[selected]) pinEls[selected].classList.remove('sel');
     selected = id; pinEls[id].classList.add('sel');
-    function paint() {
-      card.textContent = '';
-      var ph = el('div', 'ph'); fillPh(ph, s.seed, s.photo);
-      var ct = el('div');
-      ct.appendChild(el('h2', null, s.name));
-      ct.appendChild(el('p', 'yr', s.years));
-      ct.appendChild(el('p', 'bl', s.blurb));
-      if (s.cases.length) {
-        var chips = el('div', 'chips');
-        s.cases.forEach(function (c) {
-          var b = el('button', 'chip', CASES[c].title); b.type = 'button';
-          b.addEventListener('click', function () { openCase(c); });
-          chips.appendChild(b);
-        });
-        ct.appendChild(chips);
-      }
-      card.appendChild(ph); card.appendChild(ct);
-      card.classList.remove('swap');
+    var body = document.getElementById('dlgStopBody');
+    body.textContent = '';
+    var ph = el('div', 'ph'); fillPh(ph, s.seed, s.photo);
+    var ct = el('div', 'stop-d-body');
+    var h = el('h2', null, s.name); h.id = 'dlgStopTitle';
+    ct.appendChild(h);
+    ct.appendChild(el('p', 'yr', s.years));
+    ct.appendChild(el('p', 'bl', s.blurb));
+    if (s.cases.length) {
+      var chips = el('div', 'chips');
+      s.cases.forEach(function (c) {
+        var b = el('button', 'chip', CASES[c].title); b.type = 'button';
+        b.addEventListener('click', function () { dlgStop.close(); openCase(c); });
+        chips.appendChild(b);
+      });
+      ct.appendChild(chips);
     }
-    if (reduce) { paint(); return; }
-    card.classList.add('swap'); setTimeout(paint, 180);
+    body.appendChild(ph); body.appendChild(ct);
+    if (dlgStop.showModal) dlgStop.showModal(); else dlgStop.setAttribute('open', '');
   }
+  document.getElementById('dlgStopClose').addEventListener('click', function () { dlgStop.close(); });
+  dlgStop.addEventListener('click', function (e) { if (e.target === dlgStop) dlgStop.close(); });
 
   /* ---------- Work grid and dialog ---------- */
   var worksEl = document.getElementById('works');
@@ -626,6 +736,80 @@
     t.appendChild(cap); bento.appendChild(t);
   });
   Array.prototype.forEach.call(document.querySelectorAll('[data-ig]'), function (a) { a.href = INSTAGRAM_URL; });
+
+  /* ---------- Experience tabs ---------- */
+  var EXPERIENCES = [
+    {
+      id: 'gdi',
+      tab: 'GDi Partners',
+      role: 'Program Manager',
+      org: 'GDi Partners',
+      when: 'June 2023 to now',
+      bullets: [
+        'Leading the Youth Empowerment Program in Jammu and Kashmir with the Chief Secretary’s office, and the service delivery transformation in Assam with the IT and Revenue Departments. Designed and launched Punjab’s first agricultural solar irrigation program and drove the stubble burning reduction program across 10+ departments.',
+        'Supported the CEO on 15+ business development opportunities with Gates, MSDF, Open Philanthropy and CIFF, converting 25% of them. Led recruitment that grew the team 1.5x and improved retention by 25% in 18 months.'
+      ]
+    },
+    {
+      id: 'samagra',
+      tab: 'Samagra',
+      role: 'Program Consultant, then Junior Manager',
+      org: 'Samagra Governance',
+      when: 'March 2020 to May 2023',
+      bullets: [
+        'Led a four-person team designing Himachal Pradesh’s statewide education program, funded by MSDF, for 8 lakh students across 15,000 schools.',
+        'Designed e-Samwad and the WhatsApp home-learning chatbot, co-built the NIPUN Lakshya app with Google, and drove open-source field monitoring apps across three states.'
+      ]
+    },
+    {
+      id: 'caastle',
+      tab: 'CaaStle',
+      role: 'Software Engineer, then Senior Software Engineer',
+      org: 'CaaStle',
+      when: 'July 2016 to January 2020',
+      bullets: [
+        'Part of the first engineering team. Co-built GwynnieBee Closet, CaaStle’s first Android app, which reached 2 lakh daily active users.',
+        'Led the design of a no-code Clothing-as-a-Service platform that put 4 vendor apps in front of a combined 2 million users, and built a machine learning garment classifier that saved about $750K a year.'
+      ]
+    },
+    {
+      id: 'pec',
+      tab: 'PEC',
+      role: 'B.E. Information Technology',
+      org: 'Punjab Engineering College',
+      when: '2012 to 2016, Chandigarh',
+      bullets: [
+        'GPA 9.34 out of 10, in the top 5% of a batch of 400, with a merit scholarship for two years.'
+      ]
+    }
+  ];
+  var expNav = document.getElementById('expNav');
+  var expDetail = document.getElementById('expDetail');
+  function renderExperience(idx) {
+    var job = EXPERIENCES[idx];
+    Array.prototype.forEach.call(expNav.querySelectorAll('.exp-tab'), function (btn, i) {
+      btn.classList.toggle('on', i === idx);
+      btn.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+    expDetail.textContent = '';
+    var h = el('h3');
+    h.innerHTML = job.role + ' @ <span class="org">' + job.org + '</span>';
+    expDetail.appendChild(h);
+    expDetail.appendChild(el('p', 'when', job.when));
+    var ul = el('ul');
+    job.bullets.forEach(function (text) { ul.appendChild(el('li', null, text)); });
+    expDetail.appendChild(ul);
+  }
+  EXPERIENCES.forEach(function (job, idx) {
+    var b = el('button', 'exp-tab', job.tab);
+    b.type = 'button';
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
+    if (idx === 0) b.classList.add('on');
+    b.addEventListener('click', function () { renderExperience(idx); });
+    expNav.appendChild(b);
+  });
+  renderExperience(0);
 
   /* ---------- Navigation and theme ---------- */
   Array.prototype.forEach.call(document.querySelectorAll('[data-go]'), function (a) {
